@@ -4,6 +4,7 @@ import { Link } from 'gatsby'
 import hexToRgba from 'hex-rgba'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
+import * as Colors from '../../style/colors'
 import MainImage from '../MainImage'
 
 const Container = styled.div`
@@ -15,18 +16,18 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   transition: all 0.5s;
-  box-shadow: 0 0 15px 0 ${hexToRgba('#536727', 20)};
-  background-color: ${hexToRgba('#E6D5CF', 50)};
+  box-shadow: 0 0 15px 0 ${hexToRgba(Colors.PRIMARY_COLOR, 20)};
+  background-color: ${hexToRgba(Colors.SECONDARY_COLOR, 50)};
 
   &:hover {
-    box-shadow: 0 0 15px 0 ${hexToRgba('#536727', 60)};
+    box-shadow: 0 0 15px 0 ${hexToRgba(Colors.PRIMARY_COLOR, 60)};
   }
 `
 
 const HeaderSiteTitle = ({ siteTitle }) => {
   return <Link to="/"
     style={{
-      color: '#536727',
+      color: Colors.PRIMARY_COLOR,
       textDecoration: 'none',
       textAlign: 'center',
     }}
@@ -36,12 +37,12 @@ const HeaderSiteTitle = ({ siteTitle }) => {
 }
 
 const MenuLink = ({ to, title }) => {
-  return <Link to={to} style={{ color: '#536727', textDecoration: 'none', margin: '0.5rem 0' }}>{title}</Link>
+  return <Link to={to} style={{ color: Colors.PRIMARY_COLOR, textDecoration: 'none', margin: '0.5rem 0' }}>{title}</Link>
 }
 
 const SocialIcon = ({ icon }) => {
   return <div style={{ margin: '0 0.25rem' }}>
-    <FontAwesomeIcon icon={['fab', icon]} color="#536727" />
+    <FontAwesomeIcon icon={['fab', icon]} color={Colors.PRIMARY_COLOR} />
   </div>
 }
 
@@ -55,10 +56,18 @@ const SocialIconsWrapper = styled.div`
 
 const SocialLinks = () => {
   return <SocialIconsWrapper>
-    <SocialIcon icon={'linkedin-in'} />
-    <SocialIcon icon={'instagram'} />
-    <SocialIcon icon={'facebook-f'} />
-    <SocialIcon icon={'github'} />
+    <a href="https://www.linkedin.com/in/henrique-pacheco/">
+      <SocialIcon icon={'linkedin-in'} />
+    </a>
+    <a href="https://www.instagram.com/henriquejcpacheco/">
+      <SocialIcon icon={'instagram'} />
+    </a>
+    <a href="https://www.facebook.com/henrique.pacheco.948">
+      <SocialIcon icon={'facebook-f'} />
+    </a>
+    <a href="https://github.com/ikas">
+      <SocialIcon icon={'github'} />
+    </a>
   </SocialIconsWrapper>
 }
 

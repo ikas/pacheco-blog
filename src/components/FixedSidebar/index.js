@@ -1,28 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
-import hexToRgba from 'hex-rgba'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import * as Colors from '../../style/colors'
+import HighlightCard from '../HighlightCard'
 import MainImage from '../MainImage'
-
-const Container = styled.div`
-  position: fixed;
-  margin: 1rem;
-  max-width: 250px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.5s;
-  box-shadow: 0 0 15px 0 ${hexToRgba(Colors.PRIMARY_COLOR, 20)};
-  background-color: ${hexToRgba(Colors.SECONDARY_COLOR, 50)};
-
-  &:hover {
-    box-shadow: 0 0 15px 0 ${hexToRgba(Colors.PRIMARY_COLOR, 60)};
-  }
-`
 
 const HeaderSiteTitle = ({ siteTitle }) => {
   return <Link to="/"
@@ -54,6 +37,12 @@ const SocialIconsWrapper = styled.div`
   margin: 1rem 0;
 `
 
+const FixedWrapper = styled.div`
+  position: fixed;
+  margin: 1rem;
+  max-width: 250px;
+`
+
 const SocialLinks = () => {
   return <SocialIconsWrapper>
     <a href="https://www.linkedin.com/in/henrique-pacheco/">
@@ -72,16 +61,18 @@ const SocialLinks = () => {
 }
 
 const FixedSidebar = ({ siteTitle }) => (
-  <Container>
-    <MainImage />
-    <HeaderSiteTitle siteTitle={siteTitle} />
-    <MenuLink to="/#blog" title="Blog" />
-    <MenuLink to="/#timeline" title="Timeline" />
-    <MenuLink to="/#about" title="About" />
-    <MenuLink to="/#getintouch" title="Get in touch" />
+  <FixedWrapper>
+    <HighlightCard>
+      <MainImage />
+      <HeaderSiteTitle siteTitle={siteTitle} />
+      <MenuLink to="/#blog" title="Blog" />
+      <MenuLink to="/#timeline" title="Timeline" />
+      <MenuLink to="/#about" title="About" />
+      <MenuLink to="/#getintouch" title="Get in touch" />
 
-    <SocialLinks />
-  </Container>
+      <SocialLinks />
+    </HighlightCard>
+  </FixedWrapper>
 )
 
 export default FixedSidebar

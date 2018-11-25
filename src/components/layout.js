@@ -4,12 +4,14 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
+import { fas } from '@fortawesome/free-solid-svg-icons'
 
 import FixedSidebar from './FixedSidebar'
 import './layout.css'
 
 // Font awesome icons
 library.add(fab)
+library.add(fas)
 
 const Layout = ({ children }) => (
   <StaticQuery

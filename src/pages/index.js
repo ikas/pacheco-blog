@@ -1,7 +1,8 @@
 import React from 'react'
 
-import Layout from '../components/layout'
 import About from '../components/About'
+import GetInTouch from '../components/GetInTouch'
+import Layout from '../components/layout'
 import Timeline from '../components/Timeline'
 
 const IndexPage = () => (
@@ -10,6 +11,7 @@ const IndexPage = () => (
 
     <Timeline />
     <About />
+    <GetInTouch />
   </Layout>
 )
 

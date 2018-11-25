@@ -36,7 +36,25 @@ const Timeline = () => (
       <HighlightCard>
         <InternalCardWrapper>
           <TitleWrapper>
-            <H3>2014 - Present</H3>
+            <H3>2018 - Present</H3>
+            <p>Software engineer as freelancer</p>
+          </TitleWrapper>
+          <BodyWrapper>
+            <p>Work in multiple projects as part of a team of remote developers.</p>
+            <ul>
+              <li>A cluster of microservices mainly written in Node.js.</li>
+              <li>The frontend interface of a mobile app using React Native.</li>
+              <li>A Wordpress-based blog.</li>
+            </ul>
+          </BodyWrapper>
+        </InternalCardWrapper>
+      </HighlightCard>
+    </ExternalCardWrapper>
+    <ExternalCardWrapper>
+      <HighlightCard>
+        <InternalCardWrapper>
+          <TitleWrapper>
+            <H3>2014 - 2018</H3>
             <p>Software engineer, Bsolus/Beevo</p>
           </TitleWrapper>
           <BodyWrapper>

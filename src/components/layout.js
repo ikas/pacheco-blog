@@ -7,6 +7,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 
 import FixedSidebar from './FixedSidebar'
+import Footer from './Footer'
 import './layout.css'
 
 // Font awesome icons
@@ -46,6 +47,7 @@ const Layout = ({ children }) => (
         >
           {children}
         </div>
+        <Footer siteTitle={data.site.siteMetadata.title} />
       </>
     )}
   />

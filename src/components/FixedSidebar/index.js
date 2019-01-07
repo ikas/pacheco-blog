@@ -68,7 +68,6 @@ const FixedSidebar = ({ siteTitle }) => (
       <MenuLink to="/#blog" title="Blog" />
       <MenuLink to="/#timeline" title="Timeline" />
       <MenuLink to="/#about" title="About" />
-      <MenuLink to="/#getintouch" title="Get in touch" />
 
       <SocialLinks />
     </HighlightCard>

@@ -18,7 +18,8 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
+  margin-top: 4rem;
 `
 
 const TitleWrapper = styled.div`

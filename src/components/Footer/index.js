@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+
+import SocialLinks from '../SocialLinks'
 import * as Colors from '../../style/colors'
 
 const FixedWrapper = styled.div`
@@ -16,6 +18,7 @@ const FooterText = styled.span`
 const Footer = ({ siteTitle }) => (
   <FixedWrapper>
     <FooterText>{siteTitle}, 2019</FooterText>
+    <SocialLinks />
   </FixedWrapper>
 )
 

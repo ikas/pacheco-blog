@@ -4,6 +4,7 @@ import hexToRgba from 'hex-rgba'
 
 import { H2 } from '../Headers'
 import * as Colors from '../../style/colors'
+import MainImage from '../MainImage'
 
 const Wrapper = styled.div`
   display: flex;
@@ -39,7 +40,7 @@ const About = () => (
   <Wrapper id="about">
     <TitleWrapper>
       <H2>About</H2>
-      <ProfileImage src="http://henriquepacheco.com/assets/img/profile-pic.jpg" alt="Henrique Pacheco" width="200" height="200" />
+      <MainImage />
     </TitleWrapper>
 
     <ContentWrapper>

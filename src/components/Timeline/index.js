@@ -6,12 +6,12 @@ import HighlightCard from '../HighlightCard'
 
 const ExternalCardWrapper = styled.div`
   max-width: 750px;
-  align-self: center;
-  margin: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 `
 
 const InternalCardWrapper = styled.div`
-  padding: 1rem;
+  padding: 1.5rem;
 `
 
 const Wrapper = styled.div`
@@ -19,7 +19,6 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   margin-bottom: 4rem;
-  margin-top: 4rem;
 `
 
 const TitleWrapper = styled.div`
@@ -38,7 +37,7 @@ const Timeline = () => (
         <InternalCardWrapper>
           <TitleWrapper>
             <H3>2018 - Present</H3>
-            <p>Software engineer as freelancer</p>
+            <p>Remote Software Engineer</p>
           </TitleWrapper>
           <BodyWrapper>
             <p>Work in multiple projects as part of a team of remote developers.</p>

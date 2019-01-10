@@ -1,13 +1,13 @@
 module.exports = {
   siteMetadata: {
-    title: 'Henrique Pacheco',
+    title: 'Pacheco Blog',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'Pacheco\'s Blog',
+        name: 'Pacheco Blog',
         short_name: 'pacheco',
         start_url: '/',
         background_color: '#663399',

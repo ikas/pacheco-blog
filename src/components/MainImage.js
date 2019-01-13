@@ -8,7 +8,7 @@ const MainImage = () => (
       {
         file(relativePath: {eq: "images/main-pic.jpg"}) {
           childImageSharp {
-            fixed(width: 250, height: 300) {
+            fixed(width: 300, height: 250) {
               width
               height
               src

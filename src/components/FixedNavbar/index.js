@@ -37,6 +37,7 @@ const FixedWrapper = styled.div`
   flex-direction: row;
   align-items: center;
   background-color: ${Colors.PRIMARY_COLOR};
+  z-index: 100;
 `
 
 const FixedNavbar = ({ siteTitle }) => (

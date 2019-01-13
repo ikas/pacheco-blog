@@ -1,0 +1,36 @@
+div.vertical-timeline::before {
+  background: #E6D5CF;
+  border-radius: 5px;
+}
+
+div.vertical-timeline-element-content {
+  background-color: #E6D5CF;
+}
+
+@media only screen and (min-width: 1170px) {
+  .vertical-timeline--two-columns .vertical-timeline-element-content {
+    width: 45%;
+  }
+}
+
+@media only screen and (min-width: 1170px) {
+  .vertical-timeline--two-columns .vertical-timeline-element-content::before {
+    border-left-color: #E6D5CF;
+  }
+
+  .vertical-timeline--two-columns .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content::before, .vertical-timeline--two-columns .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left) .vertical-timeline-element-content::before {
+    border-right-color: #E6D5CF;
+  }
+}
+
+.vertical-timeline-element-icon {
+  box-shadow: 0 0 0 4px #E6D5CF, inset 0 2px 0 rgba(0,0,0,.08), 0 3px 0 4px rgba(0,0,0,.05);
+}
+
+.vertical-timeline-element-icon svg.fa-graduation-cap {
+  margin-left: -14px;
+}
+
+.vertical-timeline-element-content::before {
+  border-right-color: #E6D5CF;
+}

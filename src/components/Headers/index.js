@@ -14,6 +14,18 @@ export const H2 = styled.h2`
   }
 `
 
+export const H2White = styled.h2`
+  color: ${Colors.SECONDARY_COLOR};
+
+  &::after {
+    border: 2px solid ${Colors.SECONDARY_COLOR};
+    content: ' ';
+    display: block;
+    width: 30px;
+    margin: 0.25rem 0;
+  }
+`
+
 export const H3 = styled.h3`
   color: ${Colors.PRIMARY_COLOR};
 `

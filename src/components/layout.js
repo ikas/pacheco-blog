@@ -1,15 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-// import Breakpoint from 'react-socks'
 import { StaticQuery, graphql } from 'gatsby'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { far } from '@fortawesome/free-regular-svg-icons'
 
-// import FixedNavbar from './FixedNavbar'
+import FixedNavbar from './FixedNavbar'
 import Footer from './Footer'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './layout.css'
 
 // Font awesome icons
@@ -40,9 +40,7 @@ const Layout = ({ children }) => (
           <html lang="en" />
         </Helmet>
 
-        {/* <Breakpoint xsmall up> TODO: not working :( */}
-          {/* <FixedNavbar siteTitle={data.site.siteMetadata.title} /> */}
-        {/* </Breakpoint> */}
+        <FixedNavbar siteTitle={data.site.siteMetadata.title} />
 
         <div style={{ margin: '0 auto' }}>
           {children}

@@ -611,3 +611,25 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+nav.navbar {
+  background: #0b6623!important;
+  padding: 1rem;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+}
+
+nav.navbar a.navbar-brand {
+  color: #D0F0C0;
+  text-transform: uppercase;
+}
+
+nav.navbar li.nav-item {
+  margin-bottom: 0;
+}
+
+nav.navbar li.nav-item a.nav-link {
+  color: #D0F0C0;
+  text-transform: uppercase;
+}

@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   background: ${Colors.SECONDARY_COLOR};
-  padding-top: 8rem;
+  padding: 8rem 1rem 0 1rem;
 `
 
 const ContentWrapper = styled.div`

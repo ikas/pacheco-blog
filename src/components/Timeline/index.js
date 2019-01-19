@@ -12,7 +12,7 @@ const TimelineWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 5rem;
+  padding: 5rem 1rem 0 1rem;
   background-color: ${Colors.PRIMARY_COLOR};
 `
 
@@ -52,6 +52,7 @@ const TLElem = ({ title, date, location, description, type }) => {
       iconStyle={{ background: Colors.PRIMARY_COLOR }}
       icon={icon}
       style={{ width: '100%', marginTop: '2rem', marginBottom: '2rem' }}
+      animate={false}
     >
       <TimelineEntryTitle>{title}</TimelineEntryTitle>
       <IconTextWrapper>
@@ -69,7 +70,7 @@ const TLElem = ({ title, date, location, description, type }) => {
 const Timeline = () => (
   <TimelineWrapper>
     <H2White>Timeline</H2White>
-    <VerticalTimeline>
+    <VerticalTimeline animate={false}>
       <TLElem
         title="Remote Software Engineer"
         location="Braga, Portugal"

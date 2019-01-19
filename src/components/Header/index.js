@@ -10,8 +10,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 8rem;
-  padding-bottom: 2rem;
+  padding: 8rem 1rem 2rem 1rem;
   background-color: ${Colors.PRIMARY_COLOR};
 `
 
@@ -29,6 +28,7 @@ const SiteTitle = styled.div`
   text-transform: uppercase;
   color: ${Colors.SECONDARY_COLOR};
   margin-bottom: 4rem;
+  text-align: center;
 `
 
 const SiteDescription = styled.p`

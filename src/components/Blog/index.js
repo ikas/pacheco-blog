@@ -13,7 +13,7 @@ const Wrapper = styled.div`
   align-items: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 `
 
 const TitleWrapper = styled.div`
@@ -25,6 +25,16 @@ const CallToActionText = styled.p`
   text-align: center;
   color: ${Colors.PRIMARY_COLOR};
   font-size: 1.3rem;
+  margin-bottom: 3rem;
+`
+
+const ButtonText = styled.div`
+  margin-right: 1rem;
+`
+
+const ButtonWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
 `
 
 const Blog = () => (
@@ -40,14 +50,15 @@ const Blog = () => (
         background: 'transparent',
         border: `4px solid ${Colors.PRIMARY_COLOR}`,
         borderRadius: '8px',
-        padding: '0.5rem 1.5rem',
+        padding: '0.5rem 1rem',
         fontSize: '1.3rem',
       }}
       to="/blog"
     >
-      <>
-        <ArrowRightIcon />
-      </>
+      <ButtonWrapper>
+        <ButtonText>Go to Blog</ButtonText>
+        <ArrowRightIcon color={Colors.PRIMARY_COLOR} />
+      </ButtonWrapper>
     </Link>
   </Wrapper>
 )

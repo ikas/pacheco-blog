@@ -32,7 +32,7 @@ const School = ({ color, size }) => <FontAwesomeIcon
 />;
 
 const ArrowRight = ({ color, size }) => <FontAwesomeIcon
-  icon={['far', 'arrow-right']}
+  icon={['far', 'arrow-alt-circle-right']}
   color={color || "white"}
   className={size || "fa-lg"}
 />;

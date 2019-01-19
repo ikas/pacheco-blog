@@ -10,25 +10,30 @@ import {
 
 export default class FixedNavbar extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
 
-    this.toggle = this.toggle.bind(this);
-    this.state = {
-      isOpen: false
-    };
+    this.state = { visible: false }
+
+    this.handleScroll = this.handleScroll.bind(this)
   }
 
-  toggle() {
-    this.setState({
-      isOpen: !this.state.isOpen
-    });
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll, { passive: true })
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll)
+  }
+
+  handleScroll() {
+    this.setState({ visible: window.scrollY > 200 })
   }
 
   render() {
     return (
-      <Navbar color="light" light expand="sm">
+      <Navbar color="light" light expand="sm" className={this.state.visible ? 'nav-visible' : 'nav-hidden'}>
         <NavbarBrand href="/">{this.props.siteTitle}</NavbarBrand>
-        <Collapse isOpen={this.state.isOpen} navbar>
+        <Collapse navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
               <NavLink href="/#timeline">Timeline</NavLink>

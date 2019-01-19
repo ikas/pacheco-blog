@@ -8,7 +8,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { far } from '@fortawesome/free-regular-svg-icons'
 
-import FixedNavbar from './FixedNavbar'
+// import FixedNavbar from './FixedNavbar'
 import Footer from './Footer'
 import './layout.css'
 
@@ -41,15 +41,10 @@ const Layout = ({ children }) => (
         </Helmet>
 
         {/* <Breakpoint xsmall up> TODO: not working :( */}
-          <FixedNavbar siteTitle={data.site.siteMetadata.title} />
+          {/* <FixedNavbar siteTitle={data.site.siteMetadata.title} /> */}
         {/* </Breakpoint> */}
 
-        <div
-          style={{
-            margin: '0 auto',
-            paddingTop: 62,
-          }}
-        >
+        <div style={{ margin: '0 auto' }}>
           {children}
         </div>
         <Footer siteTitle={data.site.siteMetadata.title} />

@@ -4,6 +4,9 @@ import * as Colors from '../../style/colors'
 
 export const H2 = styled.h2`
   color: ${Colors.PRIMARY_COLOR};
+  font-size: 2rem;
+  line-height: 2.5rem;
+  text-transform: uppercase;
 
   &::after {
     border: 2px solid ${Colors.PRIMARY_COLOR};
@@ -16,6 +19,9 @@ export const H2 = styled.h2`
 
 export const H2White = styled.h2`
   color: ${Colors.SECONDARY_COLOR};
+  font-size: 2rem;
+  line-height: 2.5rem;
+  text-transform: uppercase;
 
   &::after {
     border: 2px solid ${Colors.SECONDARY_COLOR};

@@ -34,7 +34,7 @@ const TimelineWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   margin-bottom: 1rem;
-  padding-top: 2rem;
+  padding-top: 5rem;
   background-color: ${Colors.PRIMARY_COLOR};
 `
 

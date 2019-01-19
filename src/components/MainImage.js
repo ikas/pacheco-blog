@@ -8,14 +8,14 @@ const MainImage = () => (
       {
         file(relativePath: {eq: "images/main-pic.jpg"}) {
           childImageSharp {
-            fluid(maxWidth: 450) {
-              ...GatsbyImageSharpFluid_noBase64
+            fluid(maxWidth: 450, maxHeight: 300) {
+              ...GatsbyImageSharpFluid
             }
           }
         }
       }
     `}
-    render={data => <Img fixed={data.file.childImageSharp.fluid} />}
+    render={data => <Img fluid={data.file.childImageSharp.fluid} />}
   />
 )
 

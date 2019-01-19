@@ -25,6 +25,8 @@ const ContentWrapper = styled.div`
 
 const ImageWrapper = styled.div`
   margin-top: 1rem;
+  max-width: 450px;
+  width: 100%;
 `
 
 const HighlightLabel = styled.span`

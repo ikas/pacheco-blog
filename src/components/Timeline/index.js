@@ -8,6 +8,14 @@ import { WorkIcon, LocationIcon, CalendarIcon, SchoolIcon } from '../Icons'
 import { H2White } from '../Headers'
 import * as Colors from '../../style/colors'
 
+const TimelineWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5rem;
+  background-color: ${Colors.PRIMARY_COLOR};
+`
+
 const TimelineEntryTitle = styled.h3`
   color: ${Colors.PRIMARY_COLOR};
   font-size: 1.5rem;
@@ -27,15 +35,6 @@ const IconTextWrapper = styled.div`
   align-items: center;
   margin-top: 1rem;
   margin-bottom: 1rem;
-`
-
-const TimelineWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 1rem;
-  padding-top: 5rem;
-  background-color: ${Colors.PRIMARY_COLOR};
 `
 
 const TLElem = ({ title, date, location, description, type }) => {

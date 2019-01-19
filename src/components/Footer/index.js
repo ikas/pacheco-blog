@@ -5,7 +5,8 @@ import SocialLinks from '../SocialLinks'
 import * as Colors from '../../style/colors'
 
 const FixedWrapper = styled.div`
-  border-top: 1px solid ${Colors.PRIMARY_COLOR};
+  background: ${Colors.SECONDARY_COLOR};
+  border-top: 2px solid ${Colors.PRIMARY_COLOR};
   padding: 0.5rem;
   display: flex;
   justify-content: center;
@@ -13,6 +14,7 @@ const FixedWrapper = styled.div`
 
 const FooterText = styled.span`
   color: ${Colors.PRIMARY_COLOR};
+  font-weight: bold;
 `
 
 const Footer = ({ siteTitle }) => (

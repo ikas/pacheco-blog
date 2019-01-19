@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 4rem;
+  padding-top: 8rem;
   padding-bottom: 2rem;
   background-color: ${Colors.PRIMARY_COLOR};
 `
@@ -43,7 +43,7 @@ const CallToActionText = styled.p`
   text-align: center;
   color: ${Colors.SECONDARY_COLOR};
   font-size: 1.2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 `
 
 const ButtonText = styled.div`

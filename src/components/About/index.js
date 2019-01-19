@@ -11,19 +11,20 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`
-
-const TitleWrapper = styled.div`
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  background: ${Colors.SECONDARY_COLOR};
+  padding-top: 8rem;
 `
 
 const ContentWrapper = styled.div`
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
   font-size: 1rem;
   max-width: 600px;
   color: ${Colors.PRIMARY_COLOR};
+`
+
+const ImageWrapper = styled.div`
+  margin-top: 1rem;
 `
 
 const HighlightLabel = styled.span`
@@ -32,10 +33,8 @@ const HighlightLabel = styled.span`
 
 const About = () => (
   <Wrapper id="about">
-    <TitleWrapper>
-      <H2>About</H2>
-      <MainImage />
-    </TitleWrapper>
+    <H2>About</H2>
+    <ImageWrapper><MainImage /></ImageWrapper>
 
     <ContentWrapper>
       <p>My name is Henrique Pacheco, 25 years old, and I was born and live in Braga, Portugal.</p>

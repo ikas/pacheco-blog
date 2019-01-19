@@ -31,10 +31,17 @@ const School = ({ color, size }) => <FontAwesomeIcon
   className={size || "fa-lg"}
 />;
 
+const ArrowRight = ({ color, size }) => <FontAwesomeIcon
+  icon={['far', 'arrow-right']}
+  color={color || "white"}
+  className={size || "fa-lg"}
+/>;
+
 export {
-  Work as WorkIcon,
-  Location as LocationIcon,
-  Calendar as CalendarIcon,
+  ArrowRight as ArrowRightIcon,
   Birthday as BirthdayIcon,
+  Calendar as CalendarIcon,
+  Location as LocationIcon,
   School as SchoolIcon,
+  Work as WorkIcon,
 };

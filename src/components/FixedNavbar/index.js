@@ -8,6 +8,9 @@ import {
   NavLink,
 } from 'reactstrap';
 
+import { ArrowRightIcon } from '../Icons';
+import * as Colors from '../../style/colors'
+
 export default class FixedNavbar extends React.Component {
   constructor(props) {
     super(props)
@@ -40,6 +43,12 @@ export default class FixedNavbar extends React.Component {
             </NavItem>
             <NavItem>
               <NavLink href="/#about">About</NavLink>
+            </NavItem>
+          </Nav>
+
+          <Nav className="ml-auto" navbar>
+            <NavItem>
+              <NavLink href="/blog">Blog <ArrowRightIcon color={Colors} /></NavLink>
             </NavItem>
           </Nav>
         </Collapse>

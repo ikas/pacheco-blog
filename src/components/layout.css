@@ -185,7 +185,6 @@ textarea {
   font: inherit;
 }
 html {
-  font: 112.5%/1.45em 'Space Mono', monospace;
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -207,6 +206,7 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
+  font: 112.5%/1.45em 'Space Mono', monospace;
 }
 img {
   max-width: 100%;
@@ -622,7 +622,7 @@ nav.navbar {
   opacity: 1;
   will-change: opacity;
   border-bottom: 1px solid #D0F0C0;
-  box-shadow: 0 4px 12px -4px #0b6623;
+  box-shadow: 0 4px 6px -4px #0b6623;
 }
 
 nav.navbar.nav-hidden {
@@ -636,6 +636,7 @@ nav.navbar.nav-visible {
 
 nav.navbar a.navbar-brand {
   color: #D0F0C0;
+  font-weight: bold;
   text-transform: uppercase;
   padding: 0;
 }
@@ -647,4 +648,5 @@ nav.navbar li.nav-item {
 nav.navbar li.nav-item a.nav-link {
   color: #D0F0C0;
   text-transform: uppercase;
+  font-weight: bold;
 }

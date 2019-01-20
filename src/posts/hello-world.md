@@ -1,11 +1,9 @@
 ---
-path: "/blog/my-first-post"
+path: "/blog/hello-world"
 title:  "Hello, world!"
-language: en
 date:   "2018-01-14"
 author: "Henrique Pacheco"
-layout: post
-short_description: "My first blog post, hope you enjoy!"
+description: "My first blog post, hope you enjoy!"
 category: Personal
 ---
 

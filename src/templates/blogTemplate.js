@@ -1,25 +1,30 @@
 import React from "react"
 import { graphql } from "gatsby"
+import styled from 'styled-components'
+import { Container } from 'reactstrap'
 
 import Layout from '../components/layout'
+import BlogPostHeader from '../components/BlogPostHeader'
+import BlogPostInfo from '../components/BlogPostInfo'
+import BlogPostContent from '../components/BlogPostContent'
+import * as Colors from '../style/colors'
 
-export default function Template({
-  data, // this prop will be injected by the GraphQL query below.
-}) {
-  const { markdownRemark } = data // data.markdownRemark holds our post data
+const PostContentWrapper = styled.div`
+  background: ${Colors.SECONDARY_COLOR};
+`
+
+export default function Template({ data }) {
+  const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
   return (
     <Layout>
-      <div className="blog-post-container">
-        <div className="blog-post">
-          <h1>{frontmatter.title}</h1>
-          <h2>{frontmatter.date}</h2>
-          <div
-            className="blog-post-content"
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
-        </div>
-      </div>
+      <BlogPostHeader {...frontmatter} />
+      <PostContentWrapper>
+        <Container>
+          <BlogPostInfo {...frontmatter} />
+          <BlogPostContent html={html} />
+        </Container>
+      </PostContentWrapper>
     </Layout>
   )
 }
@@ -29,9 +34,12 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "DD MMM, YYYY")
         path
         title
+        author
+        description
+        category
       }
     }
   }

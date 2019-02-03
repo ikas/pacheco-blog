@@ -4,15 +4,15 @@ import hexToRgba from 'hex-rgba'
 
 import { H2 } from '../Headers'
 import * as Colors from '../../style/colors'
-import MainImage from '../MainImage'
+import AboutImage from '../AboutImage'
 
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: ${Colors.SECONDARY_COLOR};
-  padding: 8rem 1rem 0 1rem;
+  background: ${Colors.WHITE};
+  padding: 6rem 1rem 0 1rem;
 `
 
 const ContentWrapper = styled.div`
@@ -30,13 +30,13 @@ const ImageWrapper = styled.div`
 `
 
 const HighlightLabel = styled.span`
-  background-color: ${hexToRgba(Colors.PRIMARY_COLOR, 20)};
+  background-color: ${hexToRgba(Colors.SECONDARY_COLOR)};
 `
 
 const About = () => (
   <Wrapper id="about">
     <H2>About</H2>
-    <ImageWrapper><MainImage /></ImageWrapper>
+    <ImageWrapper><AboutImage /></ImageWrapper>
 
     <ContentWrapper>
       <p>My name is Henrique Pacheco, 25 years old, and I was born and live in Braga, Portugal.</p>

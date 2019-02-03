@@ -7,9 +7,9 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { far } from '@fortawesome/free-regular-svg-icons'
 
-import FixedNavbar from './FixedNavbar'
-import * as Colors from '../style/colors'
-import Footer from './Footer'
+import FixedNavbar from '../FixedNavbar'
+import * as Colors from '../../style/colors'
+import Footer from '../Footer'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './layout.css'
 

@@ -4,7 +4,7 @@ import { Container } from 'reactstrap'
 
 import BlogHeader from '../components/BlogHeader'
 import PostPreview from '../components/PostPreview'
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 
 const BlogPage = ({
   data: {

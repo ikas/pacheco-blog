@@ -21,16 +21,16 @@ const SocialIconsWrapper = styled.div`
 const SocialLinks = () => {
   return (
     <SocialIconsWrapper>
-      <a href="https://www.linkedin.com/in/henrique-pacheco/">
+      <a href="https://www.linkedin.com/in/henrique-pacheco/" aria-label="LinkedIn de Henrique Pacheco">
         <SocialIcon icon={'linkedin-in'} />
       </a>
-      <a href="https://www.instagram.com/henriquejcpacheco/">
+      <a href="https://www.instagram.com/henriquejcpacheco/" aria-label="Instagram de Henrique Pacheco">
         <SocialIcon icon={'instagram'} />
       </a>
-      <a href="https://www.facebook.com/henrique.pacheco.948">
+      <a href="https://www.facebook.com/henrique.pacheco.948" aria-label="Facebook de Henrique Pacheco">
         <SocialIcon icon={'facebook-f'} />
       </a>
-      <a href="https://github.com/ikas">
+      <a href="https://github.com/ikas" aria-label="GitHub de Henrique Pacheco">
         <SocialIcon icon={'github'} />
       </a>
     </SocialIconsWrapper>)

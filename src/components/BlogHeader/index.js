@@ -24,11 +24,11 @@ const BlogSecText = styled.p`
   margin-bottom: 0;
 `
 
-const BlogHeader = () => (
+const BlogHeader = ({ title, description }) => (
   <Wrapper>
     <Container>
-      <BlogHeaderText>Pacheco Blog</BlogHeaderText>
-      <BlogSecText>Some thoughts about this world we live in.</BlogSecText>
+      <BlogHeaderText>{title}</BlogHeaderText>
+      <BlogSecText>{description}</BlogSecText>
     </Container>
   </Wrapper>
 )

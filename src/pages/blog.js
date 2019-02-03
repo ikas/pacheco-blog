@@ -16,7 +16,7 @@ const BlogPage = ({
 
   return (
     <Layout>
-      <BlogHeader />
+      <BlogHeader title="Pacheco Blog" description="Some thoughts about this world we live in." />
       <Container>{posts}</Container>
     </Layout>
   )

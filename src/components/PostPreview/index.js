@@ -6,7 +6,7 @@ import * as Colors from '../../style/colors'
 
 const PostPreviewWrapper = styled.div`
   padding: 2rem;
-  background-color: white;
+  background-color: ${Colors.WHITE};
   box-shadow: 0px 0px 15px 1px ${hexToRgba(Colors.PRIMARY_COLOR, 50)};
   margin: 2rem 0;
 `

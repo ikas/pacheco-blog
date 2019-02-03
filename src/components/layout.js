@@ -8,6 +8,7 @@ import { fas } from '@fortawesome/free-solid-svg-icons'
 import { far } from '@fortawesome/free-regular-svg-icons'
 
 import FixedNavbar from './FixedNavbar'
+import * as Colors from '../style/colors'
 import Footer from './Footer'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './layout.css'
@@ -42,7 +43,7 @@ const Layout = ({ children }) => (
 
         <FixedNavbar siteTitle={data.site.siteMetadata.title} />
 
-        <div style={{ margin: '0 auto' }}>
+        <div style={{ margin: '0 auto', backgroundColor: Colors.WHITE }}>
           {children}
         </div>
         <Footer siteTitle={data.site.siteMetadata.title} />

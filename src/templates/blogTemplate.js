@@ -4,13 +4,13 @@ import styled from 'styled-components'
 import { Container } from 'reactstrap'
 
 import Layout from '../components/layout'
-import BlogPostHeader from '../components/BlogPostHeader'
+import BlogHeader from '../components/BlogHeader'
 import BlogPostInfo from '../components/BlogPostInfo'
 import BlogPostContent from '../components/BlogPostContent'
 import * as Colors from '../style/colors'
 
 const PostContentWrapper = styled.div`
-  background: ${Colors.SECONDARY_COLOR};
+  background: ${Colors.WHITE};
 `
 
 export default function Template({ data }) {
@@ -18,7 +18,7 @@ export default function Template({ data }) {
   const { frontmatter, html } = markdownRemark
   return (
     <Layout>
-      <BlogPostHeader {...frontmatter} />
+      <BlogHeader title={frontmatter.title} description={frontmatter.description} />
       <PostContentWrapper>
         <Container>
           <BlogPostInfo {...frontmatter} />

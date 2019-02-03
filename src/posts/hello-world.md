@@ -1,11 +1,11 @@
 ---
-path: "/blog/hello-world"
-title:  "Hello, world!"
-date:   "2018-01-14"
-author: "Henrique Pacheco"
+path:        "/blog/hello-world"
+title:       "Hello, world!"
+date:        "2018-01-14"
+author:      "Henrique Pacheco"
 description: "My first blog post, hope you enjoy!"
-category: "Personal"
-featured: true
+category:    "Personal"
+featured:    true
 ---
 
 Hey :)

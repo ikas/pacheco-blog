@@ -5,7 +5,7 @@ import SocialLinks from '../SocialLinks'
 import * as Colors from '../../style/colors'
 
 const FixedWrapper = styled.div`
-  background: ${Colors.SECONDARY_COLOR};
+  background: ${Colors.WHITE};
   border-top: 2px solid ${Colors.PRIMARY_COLOR};
   padding: 0.5rem;
   display: flex;

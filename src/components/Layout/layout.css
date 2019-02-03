@@ -612,46 +612,6 @@ pre tt:after {
   }
 }
 
-nav.navbar {
-  background: #0b6623!important;
-  padding: 0.25rem 1rem;
-  position: fixed;
-  z-index: 1000;
-  width: 100%;
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  opacity: 1;
-  will-change: opacity;
-  border-bottom: 1px solid #D0F0C0;
-  box-shadow: 0 4px 6px -4px #0b6623;
-  height: 3.5rem;
-}
-
-nav.navbar.nav-hidden {
-  opacity: 0;
-  transform: translatey(-6px);
-}
-
-nav.navbar.nav-visible {
-  opacity: 1;
-}
-
-nav.navbar a.navbar-brand {
-  color: #D0F0C0;
-  font-weight: bold;
-  text-transform: uppercase;
-  padding: 0;
-}
-
-nav.navbar li.nav-item {
-  margin-bottom: 0;
-}
-
-nav.navbar li.nav-item a.nav-link {
-  color: #D0F0C0;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
 div.post-content a {
   color: #0b6623;
   font-weight: bold;

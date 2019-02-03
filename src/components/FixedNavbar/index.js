@@ -11,6 +11,8 @@ import {
 import { ArrowRightIcon } from '../Icons';
 import * as Colors from '../../style/colors'
 
+import './navbar.css'
+
 export default class FixedNavbar extends React.Component {
   constructor(props) {
     super(props)

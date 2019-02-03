@@ -1,12 +1,44 @@
-import React from 'react'
+import React from "react"
+import { graphql } from "gatsby"
+import { Container } from 'reactstrap'
 
-import Blog from '../components/Blog'
+import BlogHeader from '../components/BlogHeader'
+import PostPreview from '../components/PostPreview'
 import Layout from '../components/layout'
 
-const IndexPage = () => (
-  <Layout>
-    <Blog />
-  </Layout>
-)
+const BlogPage = ({
+  data: {
+    allMarkdownRemark: { edges },
+  },
+}) => {
+  const posts = edges.filter(edge => edge.node.frontmatter.featured)
+    .map(edge => <PostPreview key={edge.node.id} post={edge.node} />)
 
-export default IndexPage
+  return (
+    <Layout>
+      <BlogHeader />
+      <Container>{posts}</Container>
+    </Layout>
+  )
+}
+
+export default BlogPage
+
+export const pageQuery = graphql`
+  query {
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+      edges {
+        node {
+          id
+          excerpt(pruneLength: 250)
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            path
+            title
+            featured
+          }
+        }
+      }
+    }
+  }
+`

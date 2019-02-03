@@ -15,7 +15,7 @@ export default class FixedNavbar extends React.Component {
   constructor(props) {
     super(props)
 
-    this.state = { visible: false }
+    this.state = { visible: window.location.pathname !== '/' }
 
     this.handleScroll = this.handleScroll.bind(this)
   }
@@ -29,7 +29,7 @@ export default class FixedNavbar extends React.Component {
   }
 
   handleScroll() {
-    this.setState({ visible: window.scrollY > 200 })
+    this.setState({ visible: window.location.pathname !== '/' || window.scrollY > 200 })
   }
 
   render() {
@@ -46,11 +46,11 @@ export default class FixedNavbar extends React.Component {
             </NavItem>
           </Nav>
 
-          <Nav className="ml-auto" navbar>
+          { window.location.pathname === '/' ? <Nav className="ml-auto" navbar>
             <NavItem>
               <NavLink href="/blog">Blog <ArrowRightIcon color={Colors} /></NavLink>
             </NavItem>
-          </Nav>
+          </Nav> : null }
         </Collapse>
       </Navbar>
     );

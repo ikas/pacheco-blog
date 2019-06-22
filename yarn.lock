@@ -9593,7 +9593,7 @@ react-dev-utils@^4.2.1:
     strip-ansi "3.0.1"
     text-table "0.2.0"
 
-react-dom@^16.7.0:
+react-dom@^16.8.6:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.8.6.tgz#71d6303f631e8b0097f56165ef608f051ff6e10f"
   integrity sha512-1nL7PIq9LTL3fthPqwkvr2zY7phIPjYrT0jp4HjyEQrEROnw4dG41VVwi/wfoCneoleqrNX7iAD+pXebJZwrwA==
@@ -9674,11 +9674,6 @@ react-side-effect@^1.1.0:
     exenv "^1.2.1"
     shallowequal "^1.0.1"
 
-react-socks@^1.0.0:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/react-socks/-/react-socks-1.0.1.tgz#692477ebabdf5d07811540927c47581fd40f6e6d"
-  integrity sha512-3w88Y504k+vEju/mKoCXKWgXHvpdIcVNgcD3VrmnRD6R5g5x2hQYM1jVwftlJnWeA0YiSG7tHoxqPT5IxYBZXg==
-
 react-transition-group@^2.3.1:
   version "2.9.0"
   resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-2.9.0.tgz#df9cdb025796211151a436c69a8f3b97b5b07c8d"
@@ -9706,7 +9701,7 @@ react-visibility-sensor@^4.1.0:
     create-react-class "^15.6.3"
     prop-types "^15.6.2"
 
-react@^16.7.0, react@^16.8.4:
+react@^16.8.4, react@^16.8.6:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react/-/react-16.8.6.tgz#ad6c3a9614fd3a4e9ef51117f54d888da01f2bbe"
   integrity sha512-pC0uMkhLaHm11ZSJULfOBqV4tIZkx87ZLvbbQYunNixAAvjnC+snJCg0XQXn9VIsttVsbZP/H/ewzgsd5fxKXw==
@@ -11118,7 +11113,7 @@ style-to-object@^0.2.1:
   dependencies:
     css "2.2.4"
 
-styled-components@^4.0.2:
+styled-components@^4.3.2:
   version "4.3.2"
   resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-4.3.2.tgz#4ca81918c812d3006f60ac5fdec7d6b64a9509cc"
   integrity sha512-NppHzIFavZ3TsIU3R1omtddJ0Bv1+j50AKh3ZWyXHuFvJq1I8qkQ5mZ7uQgD89Y8zJNx2qRo6RqAH1BmoVafHw==

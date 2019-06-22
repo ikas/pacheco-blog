@@ -1,6 +1,7 @@
 {
   "version": 2,
   "name": "pacheco-blog",
+  "alias": ["henriquepacheco.com"],
   "builds": [
     {
       "src": "package.json",

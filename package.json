@@ -27,7 +27,8 @@
     "react-helmet": "^5.2.0",
     "react-vertical-timeline-component": "^2.3.1",
     "reactstrap": "^7.1.0",
-    "styled-components": "^4.3.2"
+    "styled-components": "^4.3.2",
+    "styled-system": "^5.0.10"
   },
   "keywords": [
     "gatsby"
@@ -38,9 +39,17 @@
     "develop": "gatsby develop",
     "format": "prettier --write '**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "now-build": "npm run build"
+    "now-build": "npm run build",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@storybook/addon-actions": "^5.1.9",
+    "@storybook/addon-links": "^5.1.9",
+    "@storybook/addons": "^5.1.9",
+    "@storybook/react": "^5.1.9",
+    "babel-loader": "^8.0.6",
     "prettier": "^1.14.2"
   },
   "repository": {

@@ -1,0 +1,1 @@
+export { default } from './heading-3-view'

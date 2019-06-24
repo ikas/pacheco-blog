@@ -22,6 +22,11 @@ const Heading2 = styled.h2`
   font-size: 3.052rem;
   font-weight: bold;
   text-transform: uppercase;
+
+  @media(max-width: 544px) {
+    line-height: 2.375rem;
+    font-size: 2.375rem;
+  }
 `
 
 const Heading3 = styled.h3`
@@ -43,6 +48,11 @@ const Heading4 = styled.h4`
   font-size: 1.625rem;
   font-weight: lighter;
   text-transform: uppercase;
+
+  @media(max-width: 544px) {
+    line-height: 1.25rem;
+    font-size: 1.25rem;
+  }
 `
 
 const Heading5 = styled.h5`

@@ -12,7 +12,7 @@ const Anchor = styled.a`
   font-weight: bold;
   text-decoration: underline;
 
-  &:hover {
+  &:hover, &:active, &:focus, &:visited {
     cursor: pointer;
     opacity: 0.6;
   }

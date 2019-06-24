@@ -12,7 +12,7 @@ import { ThemeProvider } from 'styled-components'
 import theme from '../../theme'
 import FixedNavbar from '../FixedNavbar'
 import * as Colors from '../../style/colors'
-import Footer from '../Footer'
+import Footer from '../ui-footer'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './layout.css'
 
@@ -56,7 +56,7 @@ class Layout extends React.Component {
               <div style={{ margin: '0 auto', backgroundColor: Colors.WHITE }}>
                 {children}
               </div>
-              <Footer siteTitle={data.site.siteMetadata.title} />
+              <Footer />
             </>
           )}
         />

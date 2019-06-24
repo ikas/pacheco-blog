@@ -6,7 +6,7 @@ import Footer from '../components/ui-footer'
 
 export default () => (
   <Layout>
-    <Header currentUrl="/" />
+    <Header currentUrl="/about" />
     <p>home page content</p>
     <Footer />
   </Layout>

@@ -1,13 +1,15 @@
+import React from 'react'
 import styled from 'styled-components'
 import { space, layout, color } from 'styled-system'
 
-export default styled.h1`
+const Copy = styled.p`
   ${space}
   ${layout}
   ${color}
   font-family: 'Work Sans', sans-serif;
-  line-height: 3.815rem;
-  font-size: 3.815rem;
-  font-weight: bold;
-  text-transform: uppercase;
+  line-height: 1.25rem;
+  font-size: 1.25rem;
+  font-weight: normal;
 `
+
+export default (props) => <Copy {...props} />

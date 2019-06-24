@@ -1,12 +1,15 @@
+import React from 'react'
 import styled from 'styled-components'
 import { space, layout, color } from 'styled-system'
 
-export default styled.h1`
+const Caption = styled.p`
   ${space}
   ${layout}
   ${color}
   font-family: 'Work Sans', sans-serif;
-  font-size: 3.052rem;
-  font-weight: bold;
-  text-transform: uppercase;
+  line-height: 1rem;
+  font-size: 1rem;
+  font-weight: normal;
 `
+
+export default (props) => <Caption {...props} />

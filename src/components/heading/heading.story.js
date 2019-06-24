@@ -6,7 +6,7 @@ import theme from '../../theme'
 import GlobalStyle from '../global-style'
 import Heading from './index.js'
 
-storiesOf('Typography: Heading component', module)
+storiesOf('Typography - Heading', module)
   .add('All headings', () => (
     <>
       <GlobalStyle />

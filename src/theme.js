@@ -8,5 +8,5 @@ export default {
     white: '#FFFFFF',
     lightGray: '#EAEAEA',
   },
-  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
+  space: [0, 4, 8, 16, 24, 32, 64, 128],
 }

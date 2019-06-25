@@ -9,5 +9,7 @@ export default styled.div`
   flex-direction: column;
   margin: 0 auto;
   min-width: 320px;
-  max-width: 1440px;
+  max-width: ${props => props.maxWidth || 1440}px;
+  padding-left: ${props => props.theme.space[4]}px;
+  padding-right: ${props => props.theme.space[4]}px;
 `

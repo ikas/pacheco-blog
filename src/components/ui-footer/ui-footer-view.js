@@ -12,7 +12,7 @@ const Footer = styled.footer`
 `
 
 export default () => (
-  <Footer bg="primary" px={3}>
+  <Footer bg="primary">
     <Container>
       <Copy color="white" mx={0} my={2}>Henrique Pacheco</Copy>
     </Container>

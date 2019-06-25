@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import { space, layout, color } from 'styled-system'
 
 const Copy = styled.p`
+  margin-top: 0;
+  margin-bottom: ${props => props.theme.space[3]}px;
   ${space}
   ${layout}
   ${color}

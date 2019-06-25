@@ -1,10 +1,10 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Container } from 'reactstrap'
 
 import BlogHeader from '../components/BlogHeader'
 import PostPreview from '../components/PostPreview'
 import Layout from '../components/Layout'
+import Container from '../components/container'
 
 const BlogPage = ({
   data: {

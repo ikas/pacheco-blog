@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Container } from 'reactstrap'
 
 import * as Colors from '../../style/colors'
+import Container from '../../components/container'
 
 const Wrapper = styled.div`
   padding: 6rem 1rem;

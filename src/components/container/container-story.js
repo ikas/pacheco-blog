@@ -28,3 +28,13 @@ storiesOf('UI - Container', module)
       </ThemeProvider>
     </>
   ))
+  .add('Container with smaller max width', () => (
+    <>
+      <GlobalStyle />
+      <ThemeProvider theme={theme}>
+        <Container bg="primary" maxWidth={686}>
+          <Copy color="white">example content</Copy>
+        </Container>
+      </ThemeProvider>
+    </>
+  ))

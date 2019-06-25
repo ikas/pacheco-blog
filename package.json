@@ -1,16 +1,10 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "pacheco-blog",
+  "description": "Portfolio and blog for @ikas",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Henrique Pacheco <henriquejcpacheco@gmail.com>",
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.7",
-    "@fortawesome/free-brands-svg-icons": "^5.4.2",
-    "@fortawesome/free-regular-svg-icons": "^5.6.3",
-    "@fortawesome/free-solid-svg-icons": "^5.5.0",
-    "@fortawesome/react-fontawesome": "^0.1.3",
     "babel-plugin-styled-components": "^1.8.0",
-    "bootstrap": "^4.2.1",
     "gatsby": "^2.10.0",
     "gatsby-image": "^2.0.15",
     "gatsby-plugin-manifest": "^2.0.5",
@@ -26,8 +20,6 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
-    "react-vertical-timeline-component": "^2.3.1",
-    "reactstrap": "^7.1.0",
     "styled-components": "^4.3.2",
     "styled-system": "^5.0.10"
   },
@@ -55,6 +47,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/ikas/pacheco-blog"
   }
 }

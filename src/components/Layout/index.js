@@ -5,6 +5,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import { ThemeProvider } from 'styled-components'
 import 'modern-normalize/modern-normalize.css'
 
+import GlobalStyle from '../global-style'
 import theme from '../../theme'
 
 export default class Layout extends React.Component {
@@ -24,6 +25,7 @@ export default class Layout extends React.Component {
           `}
           render={data => (
             <>
+              <GlobalStyle />
               <Helmet
                 title={data.site.siteMetadata.title}
                 meta={[

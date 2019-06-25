@@ -7,7 +7,6 @@ export default createGlobalStyle`
     font-family: 'Work Sans', sans-serif;
     background: #fff;
     color: #000;
-    padding: 1em;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeSpeed;
     word-wrap: break-word;

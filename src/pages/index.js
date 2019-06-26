@@ -5,7 +5,7 @@ import Layout from '../components/Layout'
 import Frame from '../components/full-screen-frame'
 import HomeStage from '../components/home-stage'
 import Header from '../components/ui-header'
-import Copy from '../components/copy'
+import Scroll from '../components/scroll'
 
 const ScreenWrapper = styled(Frame)`
   display: flex;
@@ -20,19 +20,14 @@ const HomeFeature = styled.div`
   justify-content: center;
 `
 
-const ScrollText = styled(Copy)`
-  text-align: center;
-`
-
 export default () => (
   <Layout>
     <ScreenWrapper>
       <Header currentUrl="/" />
       <HomeFeature>
         <HomeStage />
-        <Copy>Software Engineer from Portugal</Copy>
       </HomeFeature>
-      <ScrollText>Scroll</ScrollText>
+      <Scroll />
     </ScreenWrapper>
   </Layout>
 )

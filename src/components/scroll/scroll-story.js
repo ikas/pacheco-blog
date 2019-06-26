@@ -4,14 +4,14 @@ import { storiesOf } from '@storybook/react'
 
 import theme from '../../theme'
 import GlobalStyle from '../global-style'
-import HomeStage from './home-stage-view.js'
+import Scroll from './scroll-view.js'
 
-storiesOf('Home - Main Heading', module)
+storiesOf('Home - Scroll', module)
   .add('Default', () => (
     <>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
-        <HomeStage />
+        <Scroll />
       </ThemeProvider>
     </>
   ))

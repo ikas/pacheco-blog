@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Heading from '../heading'
+import Copy from '../copy'
 
 const StyledHeading = styled(Heading)`
   font-family: 'Mukta';
@@ -36,6 +37,27 @@ const StyledHeading = styled(Heading)`
   }
 `
 
+const StyledCopy = styled(Copy)`
+  font-size: 30px;
+  line-height: 33px;
+  text-align: center;
+
+  @media(max-width: 768px) {
+    max-width: 50%;
+    font-size: 26px;
+    line-height: 29px;
+  }
+  
+  @media(max-width: 544px) {
+    font-size: 20px;
+    line-height: 22px;
+    max-width: 50%;
+  }
+`
+
 export default () => (
-  <StyledHeading>Henrique<br/>Pacheco</StyledHeading>
+  <>
+    <StyledHeading>Henrique<br/>Pacheco</StyledHeading>
+    <StyledCopy color="primaryShade1">Software Engineer from Portugal</StyledCopy>
+  </>
 )

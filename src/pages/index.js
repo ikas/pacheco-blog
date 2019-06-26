@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import Layout from '../components/Layout'
 import Frame from '../components/full-screen-frame'
+import HomeStage from '../components/home-stage'
 import Header from '../components/ui-header'
 import Copy from '../components/copy'
 
@@ -28,7 +29,7 @@ export default () => (
     <ScreenWrapper>
       <Header currentUrl="/" />
       <HomeFeature>
-        <Copy>Henrique Pacheco</Copy>
+        <HomeStage />
         <Copy>Software Engineer from Portugal</Copy>
       </HomeFeature>
       <ScrollText>Scroll</ScrollText>

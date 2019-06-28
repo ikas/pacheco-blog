@@ -1,1 +1,1 @@
-export { default } from './experience-view'
+export { default } from './experience-container'

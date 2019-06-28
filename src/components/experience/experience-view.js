@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 
 import Heading from '../heading'
@@ -6,6 +6,9 @@ import Copy from '../copy'
 
 const Wrapper = styled.div`
   margin-bottom: 26px;
+  max-height: ${props => props.isOpen ? '450px' : '80px'};
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
 `
 
 const HeadingWrapper = styled.div`
@@ -29,58 +32,45 @@ const FromToCopy = styled(Copy)`
   line-height: 33px;
 `
 
-const experiences = [
-  { 
-    from: 'July 2018', 
-    to: 'Now', 
-    title: 'Remote Software Engineer', 
-    skills: 'Node.JS / React Native / React / Redux / CSS / Wordpress',
-    items: [
-      'Multiple projects as part of a network of remote workers.',
-      'Cluster of microservices mainly written in Node.js.',
-      'Frontend UI of a mobile app using React Native.',
-    ],
-  },
-  { 
-    from: '2014', 
-    to: '2018', 
-    title: 'Bsolus/Beevo', 
-    skills: 'PHP / E-commerce / HTML / CSS / JavaScript',
-    items: [
-      'Development of web platforms focused on B2B/B2C e-commerce and HR management systems',
-      'Architecture of Beevo platform.',
-      'Projects for national customers and alongside international teams.',
-      'Full stack web development & Team Lead.',
-    ],
-  },
-  { 
-    from: '2014', 
-    to: '2018', 
-    title: 'MSc Software Engineering', 
-    skills: 'Business Intelligence / React Native / React / Redux / CSS / Wordpress',
-    items: [
-      'Thesis on usability engineering - development of widgets for an open-source prototyping tool (PVSio-Web).',
-      'Specialized on Business Intelligence and Applicational Architectures.',
-      'Natual language processing and software testing.',
-    ],
-  },
-]
+export default ({ experiences }) => {
+  // Use open indexes to manage collapsible sections currently opened
+  const [ openIndexes, setOpenIndexes ] = useState([])
 
-export default () => (
-  <div>
-    <Heading level={2} mt={6} mb={5}>Experience</Heading>
-    { experiences.map((exp, idx) => (
-        <Wrapper key={idx}>
-          <HeadingWrapper>
-            <TitleWrapper>
-              <Heading level={4} my={0}>{exp.title}</Heading>
-              <SkillsCopy color="secondary" mb={0} mt={1}>{exp.skills}</SkillsCopy>
-            </TitleWrapper>
-            <FromToCopy color="primaryShade2" mb={0}>{exp.from} - {exp.to}</FromToCopy>
-          </HeadingWrapper>
-          
-          { exp.items.map((item, idx) => (<Copy key={idx} mb={0} mt={3}>- {item}</Copy>)) }
-        </Wrapper>
-    ))}
-  </div>
-)
+  // Method that toggles as open or closed the provided idx
+  const getNewIndexes = (current, idx) => { 
+    // If idx exists in current, remove it
+    if (current.includes(idx)) {
+      const currIdx = current.indexOf(idx)
+      return [
+        ...current.slice(0, currIdx), 
+        ...current.slice(currIdx + 1)
+      ]
+    // If it does not exist, add it
+    } else {
+      return current.concat([idx])
+    }
+  }
+  
+  return (
+    <div>
+      <Heading level={2} mt={6} mb={5}>Experience</Heading>
+      { experiences.map((exp, idx) => (
+          <Wrapper 
+            key={idx} 
+            isOpen={openIndexes.includes(idx)}
+            onClick={() => setOpenIndexes(getNewIndexes(openIndexes, idx))}
+          >
+            <HeadingWrapper>
+              <TitleWrapper>
+                <Heading level={4} my={0}>{exp.title}</Heading>
+                <SkillsCopy color="secondary" mb={0} mt={1}>{exp.skills}</SkillsCopy>
+              </TitleWrapper>
+              <FromToCopy color="primaryShade2" mb={0}>{exp.from} - {exp.to}</FromToCopy>
+            </HeadingWrapper>
+
+            { exp.items.map((item, idx) => (<Copy key={idx} mb={0} mt={3}>- {item}</Copy>)) }
+          </Wrapper>
+      ))}
+    </div>
+  )
+}

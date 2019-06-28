@@ -9,9 +9,5 @@ const DatesCopy = styled(Copy)`
 `
 
 export default props => (
-  <DatesCopy 
-    mb={0} 
-    color={props.active ? 'primary' : 'primaryShade2'}
-    {...props}
-  />
+  <DatesCopy mb={0} color={props.hovered ? 'primary' : 'primaryShade2'} {...props} />
 )

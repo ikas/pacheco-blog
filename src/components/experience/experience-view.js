@@ -24,16 +24,6 @@ const HeadingWrapper = styled.div`
   &:hover {
     cursor: pointer;
   }
-
-  &:hover h4 {
-    text-decoration: underline;
-    color: ${props => props.theme.colors.primary}
-  }
-  
-  &:hover h4 {
-    text-decoration: underline;
-    color: ${props => props.theme.colors.primary}
-  }
 `
 
 const TitleWrapper = styled.div`
@@ -43,6 +33,7 @@ const TitleWrapper = styled.div`
 export default ({ experiences }) => {
   // Use open indexes to manage collapsible sections currently opened
   const [ openIndexes, setOpenIndexes ] = useState([])
+  const [ hoveredIndex, setHoveredIndex ] = useState()
 
   // Method that toggles as open or closed the provided idx
   const getNewIndexes = (current, idx) => { 
@@ -64,15 +55,22 @@ export default ({ experiences }) => {
       <Heading level={2} mt={6} mb={5}>Experience</Heading>
       { experiences.map((exp, idx) => (
           <Wrapper key={idx} isOpen={openIndexes.includes(idx)}>
-            <HeadingWrapper onClick={() => setOpenIndexes(getNewIndexes(openIndexes, idx))}>
+            <HeadingWrapper 
+              onMouseEnter={() => setHoveredIndex(idx)}
+              onMouseLeave={() => setHoveredIndex(undefined)}
+              onClick={() => setOpenIndexes(getNewIndexes(openIndexes, idx))}
+            >
               <TitleWrapper>
-                <TitleCopy active={openIndexes.includes(idx)}>
+                <TitleCopy 
+                  hovered={idx === hoveredIndex} 
+                  active={openIndexes.includes(idx)}
+                >
                   {exp.title}
                 </TitleCopy>
                 <SkillsCopy>{exp.skills}</SkillsCopy>
               </TitleWrapper>
               
-              <DatesCopy active={openIndexes.includes(idx)}>
+              <DatesCopy hovered={idx === hoveredIndex}>
                 {exp.from} - {exp.to}
               </DatesCopy>
             </HeadingWrapper>

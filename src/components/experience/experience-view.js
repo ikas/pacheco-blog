@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 
+import DatesCopy from './dates-copy'
+import SkillsCopy from './skills-copy'
+import TitleCopy from './title-copy'
+
 import Heading from '../heading'
 import Copy from '../copy'
 
@@ -16,20 +20,24 @@ const HeadingWrapper = styled.div`
   flex-direction: row;
   align-items: center;
   margin-bottom: 8px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover h4 {
+    text-decoration: underline;
+    color: ${props => props.theme.colors.primary}
+  }
+  
+  &:hover h4 {
+    text-decoration: underline;
+    color: ${props => props.theme.colors.primary}
+  }
 `
 
 const TitleWrapper = styled.div`
   flex: 1;
-`
-
-const SkillsCopy = styled(Copy)`
-  font-size: 16px;
-  line-height: 33px;
-`
-
-const FromToCopy = styled(Copy)`
-  font-size: 16px;
-  line-height: 33px;
 `
 
 export default ({ experiences }) => {
@@ -55,17 +63,18 @@ export default ({ experiences }) => {
     <div>
       <Heading level={2} mt={6} mb={5}>Experience</Heading>
       { experiences.map((exp, idx) => (
-          <Wrapper 
-            key={idx} 
-            isOpen={openIndexes.includes(idx)}
-            onClick={() => setOpenIndexes(getNewIndexes(openIndexes, idx))}
-          >
-            <HeadingWrapper>
+          <Wrapper key={idx} isOpen={openIndexes.includes(idx)}>
+            <HeadingWrapper onClick={() => setOpenIndexes(getNewIndexes(openIndexes, idx))}>
               <TitleWrapper>
-                <Heading level={4} my={0}>{exp.title}</Heading>
-                <SkillsCopy color="secondary" mb={0} mt={1}>{exp.skills}</SkillsCopy>
+                <TitleCopy active={openIndexes.includes(idx)}>
+                  {exp.title}
+                </TitleCopy>
+                <SkillsCopy>{exp.skills}</SkillsCopy>
               </TitleWrapper>
-              <FromToCopy color="primaryShade2" mb={0}>{exp.from} - {exp.to}</FromToCopy>
+              
+              <DatesCopy active={openIndexes.includes(idx)}>
+                {exp.from} - {exp.to}
+              </DatesCopy>
             </HeadingWrapper>
 
             { exp.items.map((item, idx) => (<Copy key={idx} mb={0} mt={3}>- {item}</Copy>)) }

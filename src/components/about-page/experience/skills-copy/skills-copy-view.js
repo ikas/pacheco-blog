@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Copy from '../../copy'
+import Copy from '../../../copy'
 
 const SkillsCopy = styled(Copy)`
   font-size: 16px;

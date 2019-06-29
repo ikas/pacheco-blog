@@ -5,8 +5,8 @@ import DatesCopy from './dates-copy'
 import SkillsCopy from './skills-copy'
 import TitleCopy from './title-copy'
 
-import Heading from '../heading'
-import Copy from '../copy'
+import Heading from '../../heading'
+import Copy from '../../copy'
 
 const Wrapper = styled.div`
   margin-bottom: 26px;

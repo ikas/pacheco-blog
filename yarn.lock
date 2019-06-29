@@ -11876,6 +11876,11 @@ react-side-effect@^1.1.0:
     exenv "^1.2.1"
     shallowequal "^1.0.1"
 
+react-socks@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-socks/-/react-socks-1.0.1.tgz#692477ebabdf5d07811540927c47581fd40f6e6d"
+  integrity sha512-3w88Y504k+vEju/mKoCXKWgXHvpdIcVNgcD3VrmnRD6R5g5x2hQYM1jVwftlJnWeA0YiSG7tHoxqPT5IxYBZXg==
+
 react-syntax-highlighter@^8.0.1:
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/react-syntax-highlighter/-/react-syntax-highlighter-8.1.0.tgz#59103ff17a828a27ed7c8f035ae2558f09b6b78c"

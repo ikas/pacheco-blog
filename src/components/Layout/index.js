@@ -3,10 +3,19 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import { ThemeProvider } from 'styled-components'
-import 'modern-normalize/modern-normalize.css'
+import { BreakpointProvider, setDefaultBreakpoints } from 'react-socks'
 
+import 'modern-normalize/modern-normalize.css'
 import GlobalStyle from '../global-style'
 import theme from '../../theme'
+
+setDefaultBreakpoints([
+  { xs: 0 },
+  { s: 544 },
+  { m: 768 },
+  { l: 1024 },
+  { xl: 1440 },
+])
 
 export default class Layout extends React.Component {
   render() {
@@ -24,7 +33,7 @@ export default class Layout extends React.Component {
             }
           `}
           render={data => (
-            <>
+            <BreakpointProvider>
               <GlobalStyle />
               <Helmet
                 title={data.site.siteMetadata.title}
@@ -37,7 +46,7 @@ export default class Layout extends React.Component {
               </Helmet>
 
               {children}
-            </>
+            </BreakpointProvider>
           )}
         />
       </ThemeProvider>

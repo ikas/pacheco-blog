@@ -1,11 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
+import { space } from 'styled-system'
 
 import Anchor from '../../anchor'
 import Heading from '../../heading'
 
 const Wrapper = styled.div`
-  margin-bottom: 128px;
+  ${space}
 `
 
 const StyledAnchor = styled(Anchor)`
@@ -15,7 +16,7 @@ const StyledAnchor = styled(Anchor)`
 `
 
 export default () => (
-  <Wrapper>
+  <Wrapper mb={[6, 7]}>
     <Heading level={2} mt={4} mb={3}>Social</Heading>
     <StyledAnchor href="https://github.com/ikas">
       <Heading level={4} mt={0} mb={2}>Github</Heading>

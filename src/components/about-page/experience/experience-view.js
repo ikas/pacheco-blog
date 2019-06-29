@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import Breakpoint from 'react-socks'
 
 import DatesCopy from './dates-copy'
 import SkillsCopy from './skills-copy'
@@ -13,6 +14,10 @@ const Wrapper = styled.div`
   max-height: ${props => props.isOpen ? '450px' : '80px'};
   transition: all 0.5s ease-in-out;
   overflow: hidden;
+
+  @media (max-width: 544px) {
+    max-height: ${props => props.isOpen ? '600px' : '120px'};
+  }
 `
 
 const HeadingWrapper = styled.div`
@@ -23,6 +28,11 @@ const HeadingWrapper = styled.div`
 
   &:hover {
     cursor: pointer;
+  }
+
+  @media (max-width: 544px) {
+    flex-direction: column;
+    align-items: flex-start;
   }
 `
 
@@ -67,15 +77,26 @@ export default ({ experiences }) => {
                 >
                   {exp.title}
                 </TitleCopy>
+                <Breakpoint s down>
+                  <DatesCopy hovered={idx === hoveredIndex}>
+                    {exp.from} - {exp.to}
+                  </DatesCopy>
+                </Breakpoint>
                 <SkillsCopy>{exp.skills}</SkillsCopy>
               </TitleWrapper>
               
-              <DatesCopy hovered={idx === hoveredIndex}>
-                {exp.from} - {exp.to}
-              </DatesCopy>
+              <Breakpoint m up>
+                <DatesCopy hovered={idx === hoveredIndex}>
+                  {exp.from} - {exp.to}
+                </DatesCopy>
+              </Breakpoint>
             </HeadingWrapper>
 
-            { exp.items.map((item, idx) => (<Copy key={idx} mb={0} mt={3}>- {item}</Copy>)) }
+            { exp.items.map((item, idx) => (
+                <Copy key={idx} mb={0} mt={3} fontSize={[ '1rem', '1.25rem' ]}>
+                  - {item}
+                </Copy>
+            ))}
           </Wrapper>
       ))}
     </div>

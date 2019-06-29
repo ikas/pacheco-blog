@@ -7,6 +7,7 @@ import Heading from '../components/heading'
 import Copy from '../components/copy'
 import Anchor from '../components/anchor'
 import Experience from '../components/experience'
+import Social from '../components/social'
 import Footer from '../components/ui-footer'
 
 export default () => (
@@ -18,9 +19,11 @@ export default () => (
       <Copy>I’m into web technologies, clean and scalable solutions and remote working.</Copy>
       <Copy mb={4}>Want to know more?</Copy>
       <Anchor>Get in touch</Anchor>
+      
       <Experience />
-      <Heading level={2} mt={6} mb={5}>Social</Heading>
-      <Copy>Want to know more?</Copy>
+      
+      <Social />
+      
       <Heading level={2} mt={6} mb={5}>Other interests</Heading>
       <Copy mb={7}>This section is optional</Copy>
     </Container>

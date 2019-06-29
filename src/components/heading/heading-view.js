@@ -1,25 +1,27 @@
 import React from 'react'
 import styled from 'styled-components'
-import { space, layout, color } from 'styled-system'
+import { space, layout, color, fontSize } from 'styled-system'
 
 const Heading1 = styled.h1`
+  font-size: 3.815rem;
   ${space}
   ${layout}
   ${color}
+  ${fontSize}
   font-family: 'Work Sans', sans-serif;
   line-height: 3.815rem;
-  font-size: 3.815rem;
   font-weight: bold;
   text-transform: uppercase;
 `
 
 const Heading2 = styled.h2`
+  font-size: 3.052rem;
   ${space}
   ${layout}
   ${color}
+  ${fontSize}
   font-family: 'Work Sans', sans-serif;
   line-height: 3.052rem;
-  font-size: 3.052rem;
   font-weight: bold;
   text-transform: uppercase;
 
@@ -30,22 +32,24 @@ const Heading2 = styled.h2`
 `
 
 const Heading3 = styled.h3`
+  font-size: 2.441rem;
   ${space}
   ${layout}
   ${color}
+  ${fontSize}
   font-family: 'Work Sans', sans-serif;
   line-height: 2.441rem;
-  font-size: 2.441rem;
   font-weight: normal;
 `
 
 const Heading4 = styled.h4`
+  font-size: 1.625rem;
   ${space}
   ${layout}
   ${color}
+  ${fontSize}
   font-family: 'Work Sans', sans-serif;
   line-height: 1.625rem;
-  font-size: 1.625rem;
   font-weight: lighter;
   text-transform: uppercase;
 
@@ -56,12 +60,13 @@ const Heading4 = styled.h4`
 `
 
 const Heading5 = styled.h5`
+  font-size: 1.5rem;
   ${space}
   ${layout}
   ${color}
+  ${fontSize}
   font-family: 'Work Sans', sans-serif;
   line-height: 1.5rem;
-  font-size: 1.5rem;
   font-weight: normal;
   text-transform: uppercase;
 `

@@ -38,26 +38,25 @@ const StyledHeading = styled(Heading)`
 `
 
 const StyledCopy = styled(Copy)`
-  font-size: 30px;
   line-height: 33px;
   text-align: center;
 
   @media(max-width: 768px) {
-    max-width: 50%;
-    font-size: 26px;
     line-height: 29px;
   }
   
   @media(max-width: 544px) {
-    font-size: 20px;
     line-height: 22px;
-    max-width: 50%;
   }
 `
 
 export default () => (
   <>
-    <StyledHeading>Henrique<br/>Pacheco</StyledHeading>
-    <StyledCopy color="primaryShade1">Software Engineer from Portugal</StyledCopy>
+    <StyledHeading fontSize={[ 56, 100, 155 ]}>
+      Henrique<br/>Pacheco
+    </StyledHeading>
+    <StyledCopy fontSize={[ 20, 26, 30 ]} mt={2} width={[0.8, 0.5]} color="primaryShade1">
+      Software Engineer from Portugal
+    </StyledCopy>
   </>
 )

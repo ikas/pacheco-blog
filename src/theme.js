@@ -1,3 +1,11 @@
+const breakpoints = ['544px', '768px', '1024px', '1440px']
+
+// aliases
+breakpoints.sm = breakpoints[0]
+breakpoints.md = breakpoints[1]
+breakpoints.lg = breakpoints[2]
+breakpoints.xl = breakpoints[3]
+
 export default {
   colors: {
     primary: '#303D5D',
@@ -9,4 +17,5 @@ export default {
     lightGray: '#EAEAEA',
   },
   space: [0, 4, 8, 16, 24, 32, 64, 128],
+  breakpoints,
 }

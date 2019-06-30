@@ -7,6 +7,7 @@ import { BreakpointProvider, setDefaultBreakpoints } from 'react-socks'
 
 import 'modern-normalize/modern-normalize.css'
 import GlobalStyle from '../global-style'
+import Cursor from '../cursor'
 import theme from '../../theme'
 
 setDefaultBreakpoints([
@@ -35,6 +36,7 @@ export default class Layout extends React.Component {
           render={data => (
             <BreakpointProvider>
               <GlobalStyle />
+              <Cursor />
               <Helmet
                 title={data.site.siteMetadata.title}
                 meta={[

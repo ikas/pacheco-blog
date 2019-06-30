@@ -13,7 +13,6 @@ const Anchor = styled.a`
   text-decoration: underline;
 
   &:hover, &:active, &:focus, &:visited {
-    cursor: pointer;
     opacity: 0.6;
   }
 `

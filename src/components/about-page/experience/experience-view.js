@@ -26,10 +26,6 @@ const HeadingWrapper = styled.div`
   align-items: center;
   margin-bottom: 8px;
 
-  &:hover {
-    cursor: pointer;
-  }
-
   @media (max-width: 544px) {
     flex-direction: column;
     align-items: flex-start;

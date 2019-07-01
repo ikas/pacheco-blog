@@ -12,7 +12,7 @@ export default class CursorContainer extends React.Component {
     this.posX2 = 100
     this.posY2 = 100
 
-    const hasTouch = () => 'ontouchstart' in window
+    const hasTouch = () => typeof window !== 'undefined' && 'ontouchstart' in window
     this.shouldRender = !hasTouch()
     this.update = this.update.bind(this)
   }

@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import Breakpoint from 'react-socks'
+import { space } from 'styled-system'
+import Expand from 'react-expand-animated'
 
 import DatesCopy from './dates-copy'
 import SkillsCopy from './skills-copy'
@@ -9,22 +11,15 @@ import TitleCopy from './title-copy'
 import Heading from '../../heading'
 import Copy from '../../copy'
 
-const Wrapper = styled.div`
-  margin-bottom: 26px;
-  max-height: ${props => props.isOpen ? '450px' : '80px'};
-  transition: all 0.5s ease-in-out;
-  overflow: hidden;
-
-  @media (max-width: 544px) {
-    max-height: ${props => props.isOpen ? '600px' : '120px'};
-  }
+const ExperienceItemWrapper = styled.div`
+  ${space}
 `
 
 const HeadingWrapper = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 8px;
+  // margin-bottom: 8px;
 
   @media (max-width: 544px) {
     flex-direction: column;
@@ -60,7 +55,7 @@ export default ({ experiences }) => {
     <div>
       <Heading level={2} mt={6} mb={5}>Experience</Heading>
       { experiences.map((exp, idx) => (
-          <Wrapper key={idx} isOpen={openIndexes.includes(idx)}>
+          <ExperienceItemWrapper key={idx} mb={5}>
             <HeadingWrapper 
               onMouseEnter={() => setHoveredIndex(idx)}
               onMouseLeave={() => setHoveredIndex(undefined)}
@@ -88,12 +83,14 @@ export default ({ experiences }) => {
               </Breakpoint>
             </HeadingWrapper>
 
-            { exp.items.map((item, idx) => (
-                <Copy key={idx} mb={0} mt={3} fontSize={[ '1rem', '1.25rem' ]}>
-                  - {item}
-                </Copy>
-            ))}
-          </Wrapper>
+            <Expand open={openIndexes.includes(idx)}>
+              { exp.items.map((item, idx) => (
+                  <Copy key={idx} mb={0} mt={3} fontSize={[ '1rem', '1.25rem' ]}>
+                    - {item}
+                  </Copy>
+              ))}
+            </Expand>
+          </ExperienceItemWrapper>
       ))}
     </div>
   )

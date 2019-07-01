@@ -12,4 +12,5 @@ export default styled.div`
   flex-direction: column;
   margin: 0 auto;
   min-width: 320px;
+  width: 100%;
 `

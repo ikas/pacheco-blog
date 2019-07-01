@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link } from '@reach/router'
+import { Link } from 'gatsby'
 import { space, layout, color } from 'styled-system'
 
 const RouterLink = styled(Link)`

@@ -17,9 +17,12 @@ const Outer = styled.div`
   position: absolute;
   top: 100px;
   left: 100px;
+  // TODO: use styled systems
+  z-index: 1;
+  pointer-events: none;
 `
   
-  const Inner = styled.div`
+const Inner = styled.div`
   transition: transform 1s ease;
   transform: scale3d(1, 1, 1);
   width: 5px;
@@ -29,6 +32,9 @@ const Outer = styled.div`
   position: absolute;
   top: calc(100px + 37px/2);
   left: calc(100px + 37px/2);
+  // TODO: use styled systems
+  z-index: 1;
+  pointer-events: none;
 `
 
 export default () => (

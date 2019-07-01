@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { space, layout, color } from 'styled-system'
 
 import Anchor from '../anchor'
+import Container from '../container'
 
 const Header = styled.header`
   ${space}
@@ -23,8 +24,10 @@ const HeaderAnchors = styled(Anchor)`
 `
 
 export default ({ currentUrl }) => (
-  <Header px={[3, 4]} pt={5}>
-    <HeaderAnchors to="/" className={currentUrl === '/' ? 'active' : ''}>Home</HeaderAnchors>
-    <HeaderAnchors to="/about" className={currentUrl === '/about' ? 'active' : ''}>About</HeaderAnchors>
-  </Header>
+  <Container>
+    <Header px={[3, 4]} pt={5}>
+      <HeaderAnchors to="/" className={currentUrl === '/' ? 'active' : ''}>Home</HeaderAnchors>
+      <HeaderAnchors to="/about" className={currentUrl === '/about' ? 'active' : ''}>About</HeaderAnchors>
+    </Header>
+  </Container>
 )

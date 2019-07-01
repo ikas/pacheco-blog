@@ -9,6 +9,7 @@ const Footer = styled.footer`
   ${space}
   ${layout}
   ${color}
+  z-index: ${props => props.theme.zIndexes.footer};
 `
 
 export default () => (

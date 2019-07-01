@@ -10,16 +10,15 @@ const GlobalStyle = createGlobalStyle`
 const Outer = styled.div`
   transition: transform 1s ease 0.3s;
   transform: scale3d(1, 1, 1);
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   border: 3px solid ${props => props.theme.colors.primary};
   border-radius: 50%;
   position: absolute;
   top: 100px;
   left: 100px;
-  // TODO: use styled systems
-  z-index: 1;
   pointer-events: none;
+  z-index: ${props => props.theme.zIndexes.cursor};
 `
   
 const Inner = styled.div`
@@ -32,9 +31,8 @@ const Inner = styled.div`
   position: absolute;
   top: calc(100px + 37px/2);
   left: calc(100px + 37px/2);
-  // TODO: use styled systems
-  z-index: 1;
   pointer-events: none;
+  z-index: ${props => props.theme.zIndexes.header};
 `
 
 export default () => (

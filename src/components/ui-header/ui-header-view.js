@@ -10,6 +10,7 @@ const Header = styled.header`
   ${color}
   display: flex;
   justify-content: space-between;
+  z-index: ${props => props.theme.zIndexes.header};
 `
 
 const HeaderAnchors = styled(Anchor)`

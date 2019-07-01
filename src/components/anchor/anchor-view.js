@@ -1,6 +1,22 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from '@reach/router'
 import { space, layout, color } from 'styled-system'
+
+const RouterLink = styled(Link)`
+  ${space}
+  ${layout}
+  ${color}
+  font-family: 'Work Sans', sans-serif;
+  line-height: 1.25rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-decoration: underline;
+
+  &:hover, &:active, &:focus, &:visited {
+    opacity: 0.6;
+  }
+`
 
 const Anchor = styled.a`
   ${space}
@@ -17,4 +33,6 @@ const Anchor = styled.a`
   }
 `
 
-export default (props) => <Anchor {...props} />
+export default ({ type = 'Link', ...props }) => {
+  return type === 'Link' ? <RouterLink {...props} /> : <Anchor {...props} />
+}

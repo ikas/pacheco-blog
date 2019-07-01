@@ -24,7 +24,7 @@ const HeaderAnchors = styled(Anchor)`
 
 export default ({ currentUrl }) => (
   <Header px={[3, 4]} pt={5}>
-    <HeaderAnchors href="/" className={currentUrl === '/' ? 'active' : ''}>Home</HeaderAnchors>
-    <HeaderAnchors href="/about" className={currentUrl === '/about' ? 'active' : ''}>About</HeaderAnchors>
+    <HeaderAnchors to="/" className={currentUrl === '/' ? 'active' : ''}>Home</HeaderAnchors>
+    <HeaderAnchors to="/about" className={currentUrl === '/about' ? 'active' : ''}>About</HeaderAnchors>
   </Header>
 )

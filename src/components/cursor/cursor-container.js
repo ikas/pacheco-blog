@@ -12,6 +12,8 @@ export default class CursorContainer extends React.Component {
     this.posX2 = 100
     this.posY2 = 100
 
+    const hasTouch = () => 'ontouchstart' in window
+    this.shouldRender = !hasTouch()
     this.update = this.update.bind(this)
   }
 
@@ -48,10 +50,13 @@ export default class CursorContainer extends React.Component {
       this.mousePosition = this.getMousePos(ev)
     })
 
-    this.update()
+    if(this.shouldRender) {
+      this.update()
+    }
   }
 
   render() {
+    if(!this.shouldRender) return null
     return <CursorView {...this.props} />
   }
 }

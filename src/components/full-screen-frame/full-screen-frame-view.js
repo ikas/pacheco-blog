@@ -8,9 +8,10 @@ export default styled.div`
   left: 0;
   border-style: solid;
   border-color: ${props => props.theme.colors.primary};
-  border-width: ${props => props.theme.space[3]}px;
+  border-width: ${props => props.width !== undefined ? props.width : props.theme.space[3]}px;
+  transition: border-width 0.3s ease;
 
   @media (max-width: 544px) {
-    border-width: ${props => props.theme.space[2]}px;  
+    border-width: ${props => props.width !== undefined ? props.width : props.theme.space[2]}px;  
   }
 `

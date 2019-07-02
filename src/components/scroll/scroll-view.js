@@ -24,7 +24,7 @@ const Ellipsis = styled.div`
   height: 8px;
   border-radius: 4px;
   background: ${props => props.theme.colors.primary};
-  margin-bottom: 19px;
+  margin-bottom: 32px;
 `
 
 export default () => (

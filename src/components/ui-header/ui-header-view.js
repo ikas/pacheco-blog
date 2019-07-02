@@ -18,8 +18,19 @@ const HeaderAnchors = styled(Anchor)`
   text-decoration: none;
   font-weight: 600;
 
-  &.active {
-    border-bottom: 2px solid ${props => props.theme.colors.primary};
+  &::after {
+    content: '';
+    display: block;
+    background: ${props => props.theme.colors.primary};
+    width: calc(100% - 10px);
+    height: 3px;
+    left: 0;
+    transform: translateX(5px) scale3d(0,1,1);
+    transition: transform 0.25s ease;
+  }
+  
+  &.active::after, &:hover::after {
+    transform: translateX(5px) scale3d(1,1,1);
   }
 `
 

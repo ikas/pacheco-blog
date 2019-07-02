@@ -4,9 +4,11 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import { ThemeProvider } from 'styled-components'
 import { BreakpointProvider, setDefaultBreakpoints } from 'react-socks'
+import { Location } from '@reach/router'
 
 import 'modern-normalize/modern-normalize.css'
 import GlobalStyle from '../global-style'
+import Frame from '../full-screen-frame'
 import Cursor from '../cursor'
 import theme from '../../theme'
 
@@ -18,9 +20,11 @@ setDefaultBreakpoints([
   { xl: 1440 },
 ])
 
-export default class Layout extends React.Component {
+const routeWithoutBorder = (route) => route.includes('about')
+
+class Layout extends React.Component {
   render() {
-    const { children } = this.props
+    const { children, location } = this.props
     return (
       <ThemeProvider theme={theme}>
         <StaticQuery
@@ -48,6 +52,7 @@ export default class Layout extends React.Component {
               </Helmet>
 
               {children}
+              <Frame width={routeWithoutBorder(location.pathname) ? 0 : undefined} />
             </BreakpointProvider>
           )}
         />
@@ -59,3 +64,9 @@ export default class Layout extends React.Component {
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
+
+export default props => (
+  <Location>
+    {({ location }) => <Layout location={location} {...props} />}
+  </Location>
+)

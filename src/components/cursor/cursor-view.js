@@ -4,6 +4,7 @@ import styled, { createGlobalStyle } from 'styled-components'
 const GlobalStyle = createGlobalStyle`
   body {
     cursor: none !important;
+    overflow-x: hidden;
   }
 `
 

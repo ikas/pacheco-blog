@@ -13,5 +13,6 @@ export default createGlobalStyle`
     word-wrap: break-word;
     cursor: none !important;
     overflow-x: hidden;
+    overflow-y: scroll;
   }
 `

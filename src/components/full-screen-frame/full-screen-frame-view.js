@@ -10,6 +10,7 @@ export default styled.div`
   border-color: ${props => props.theme.colors.primary};
   border-width: ${props => props.width !== undefined ? props.width : props.theme.space[3]}px;
   transition: border-width 0.3s ease;
+  pointer-events: none;
 
   @media (max-width: 544px) {
     border-width: ${props => props.width !== undefined ? props.width : props.theme.space[2]}px;  

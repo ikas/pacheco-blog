@@ -1,12 +1,5 @@
 import React from 'react'
-import styled, { createGlobalStyle } from 'styled-components'
-
-const GlobalStyle = createGlobalStyle`
-  body {
-    cursor: none !important;
-    overflow-x: hidden;
-  }
-`
+import styled from 'styled-components'
 
 const Outer = styled.div`
   transition: transform 1s ease 0.3s;
@@ -37,9 +30,8 @@ const Inner = styled.div`
 `
 
 export default () => (
-  <>
-    <GlobalStyle />
+  <div>
     <Outer className="pointer-outer"></Outer>
     <Inner className="pointer-inner"></Inner>
-  </>
+  </div>
 )

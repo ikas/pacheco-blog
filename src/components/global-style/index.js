@@ -11,5 +11,7 @@ export default createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeSpeed;
     word-wrap: break-word;
+    cursor: none !important;
+    overflow-x: hidden;
   }
 `

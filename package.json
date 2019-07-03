@@ -4,19 +4,19 @@
   "version": "1.0.0",
   "author": "Henrique Pacheco <henriquejcpacheco@gmail.com>",
   "dependencies": {
-    "babel-plugin-styled-components": "^1.8.0",
-    "gatsby": "^2.10.0",
-    "gatsby-image": "^2.0.15",
+    "babel-plugin-styled-components": "^1.10.6",
+    "gatsby": "^2.13.1",
+    "gatsby-image": "^2.2.4",
     "gatsby-plugin-google-analytics": "^2.1.1",
     "gatsby-plugin-layout": "^1.1.0",
-    "gatsby-plugin-manifest": "^2.0.5",
+    "gatsby-plugin-manifest": "^2.2.1",
     "gatsby-plugin-offline": "^2.0.5",
     "gatsby-plugin-react-helmet": "^3.0.0",
-    "gatsby-plugin-sharp": "^2.0.7",
+    "gatsby-plugin-sharp": "^2.2.2",
     "gatsby-plugin-styled-components": "^3.0.0",
-    "gatsby-source-filesystem": "^2.0.4",
+    "gatsby-source-filesystem": "^2.1.2",
     "gatsby-transformer-remark": "^2.2.0",
-    "gatsby-transformer-sharp": "^2.1.4",
+    "gatsby-transformer-sharp": "^2.2.1",
     "hex-rgba": "^1.0.2",
     "modern-normalize": "^0.5.0",
     "react": "^16.8.6",
@@ -25,7 +25,7 @@
     "react-helmet": "^5.2.0",
     "react-socks": "^1.0.1",
     "styled-components": "^4.3.2",
-    "styled-system": "^5.0.10"
+    "styled-system": "^5.0.12"
   },
   "keywords": [
     "gatsby"
@@ -34,6 +34,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
+    "serve": "gatsby serve -p 9000",
     "format": "prettier --write '**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1",
     "now-build": "npm run build",

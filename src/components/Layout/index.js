@@ -40,7 +40,6 @@ class Layout extends React.Component {
           render={data => (
             <BreakpointProvider>
               <GlobalStyle />
-              <Cursor />
               <Helmet
                 title={data.site.siteMetadata.title}
                 meta={[
@@ -50,9 +49,9 @@ class Layout extends React.Component {
               >
                 <html lang="en" />
               </Helmet>
-
               {children}
               <Frame width={routeWithoutBorder(location.pathname) ? 0 : undefined} />
+              <Cursor />
             </BreakpointProvider>
           )}
         />

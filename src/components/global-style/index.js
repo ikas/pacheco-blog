@@ -15,4 +15,8 @@ export default createGlobalStyle`
     overflow-x: hidden;
     overflow-y: scroll;
   }
+
+  body a {
+    cursor: none !important;
+  }
 `

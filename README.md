@@ -1,8 +1,8 @@
-# [Personal website for Henrique Pacheco](henriquepacheco.com)
+# [Personal website for Henrique Pacheco](https://henriquepacheco.com)
 
 Personal website and blog of [@ikas](https://github.com/ikas), using [gatsby](https://www.npmjs.com/package/gatsby), [styled-components](https://www.npmjs.com/package/styled-components) and [styled-system](https://www.npmjs.com/package/styled-system).
 
-Design by [@antoniocapelo](https://github.com/antoniocapelo) and based on [atsby's default starter](https://github.com/gatsbyjs/gatsby-starter-default).
+Design by [@antoniocapelo](https://github.com/antoniocapelo) and based on [gatsby's default starter](https://github.com/gatsbyjs/gatsby-starter-default).
 
 ## 🚀 Quick start
 

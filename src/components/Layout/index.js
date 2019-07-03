@@ -48,6 +48,7 @@ class Layout extends React.Component {
                 ]}
               >
                 <html lang="en" />
+                <meta name="google-site-verification" content="btqk2CUsVOmjOPgskaPb_R7MazjerdUKxqwaYNUTM0o" />
               </Helmet>
               {children}
               <Frame width={routeWithoutBorder(location.pathname) ? 0 : undefined} />

@@ -43,8 +43,8 @@ class Layout extends React.Component {
               <Helmet
                 title={data.site.siteMetadata.title}
                 meta={[
-                  { name: 'description', content: 'Sample' },
-                  { name: 'keywords', content: 'sample, something' },
+                  { name: 'description', content: 'I’m Henrique, a Software Engineer from Braga, Portugal, working on full-stack development, from Node.js services to Client-Side Web applications. I’m into web technologies, clean and scalable solutions and remote working.' },
+                  { name: 'keywords', content: 'software, engineer, braga, portugal, remote, frontend, ui, ux, programming, blog' },
                 ]}
               >
                 <html lang="en" />

@@ -5,8 +5,11 @@ import { StaticQuery, graphql } from 'gatsby'
 import { ThemeProvider } from 'styled-components'
 import { BreakpointProvider, setDefaultBreakpoints } from 'react-socks'
 import { Location } from '@reach/router'
+import PerfectScrollbar from 'react-perfect-scrollbar'
 
 import 'modern-normalize/modern-normalize.css'
+import 'react-perfect-scrollbar/dist/css/styles.css'
+
 import GlobalStyle from '../global-style'
 import Frame from '../full-screen-frame'
 import Cursor from '../cursor'
@@ -51,7 +54,9 @@ class Layout extends React.Component {
                 <meta name="google-site-verification" content="btqk2CUsVOmjOPgskaPb_R7MazjerdUKxqwaYNUTM0o" />
               </Helmet>
               
-              {children}
+              <PerfectScrollbar>
+                {children}
+              </PerfectScrollbar>
               <Frame width={routeWithoutBorder(location.pathname) ? 0 : undefined} />
               <Cursor />
             </BreakpointProvider>

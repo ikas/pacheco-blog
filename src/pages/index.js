@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Scrollbars } from 'react-custom-scrollbars'
 
 import HomeStage from '../components/home-stage'
 import Header from '../components/ui-header'
@@ -21,13 +20,11 @@ const HomeFeature = styled.div`
 `
 
 export default () => (
-  <Scrollbars style={{ width: '100%', height: '100vh' }}>
-    <ScreenWrapper>
-      <Header currentUrl="/" />
-      <HomeFeature>
-        <HomeStage />
-      </HomeFeature>
-      <Scroll />
-    </ScreenWrapper>
-  </Scrollbars>
+  <ScreenWrapper>
+    <Header currentUrl="/" />
+    <HomeFeature>
+      <HomeStage />
+    </HomeFeature>
+    <Scroll />
+  </ScreenWrapper>
 )

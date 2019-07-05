@@ -5,6 +5,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import { ThemeProvider } from 'styled-components'
 import { BreakpointProvider, setDefaultBreakpoints } from 'react-socks'
 import { Location } from '@reach/router'
+import { Scrollbars } from 'react-custom-scrollbars'
 
 import 'modern-normalize/modern-normalize.css'
 import GlobalStyle from '../global-style'
@@ -50,7 +51,9 @@ class Layout extends React.Component {
                 <html lang="en" />
                 <meta name="google-site-verification" content="btqk2CUsVOmjOPgskaPb_R7MazjerdUKxqwaYNUTM0o" />
               </Helmet>
-              {children}
+              
+              <Scrollbars style={{ width: '100%', height: '100vh' }}>{children}</Scrollbars>
+              
               <Frame width={routeWithoutBorder(location.pathname) ? 0 : undefined} />
               <Cursor />
             </BreakpointProvider>

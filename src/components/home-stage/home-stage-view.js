@@ -5,8 +5,6 @@ import styled from 'styled-components'
 import Heading from '../heading'
 import Copy from '../copy'
 
-const browser = detect()
-
 const StyledHeading = styled(Heading)`
   font-family: 'Mukta';
   font-weight: normal;
@@ -18,7 +16,7 @@ const StyledHeading = styled(Heading)`
   align-items: center;
   margin: 0;
 
-  ${props => browser.name !== 'safari' ? `
+  ${props => props.browser !== 'safari' ? `
   background: linear-gradient(
     to right,
     ${props.theme.colors.primary} 0%,
@@ -55,13 +53,16 @@ const StyledCopy = styled(Copy)`
   }
 `
 
-export default () => (
-  <>
-    <StyledHeading fontSize={[ 56, 100, 155 ]}>
-      Henrique<br/>Pacheco
-    </StyledHeading>
-    <StyledCopy fontSize={[ 20, 26, 30 ]} mt={2} width={[0.8, 0.5]} color="primaryShade1">
-      Software Engineer from Portugal
-    </StyledCopy>
-  </>
-)
+export default () => {
+  const browser = detect()
+  return (
+    <>
+      <StyledHeading fontSize={[ 56, 100, 155 ]} browser={browser.name}>
+        Henrique<br/>Pacheco
+      </StyledHeading>
+      <StyledCopy fontSize={[ 20, 26, 30 ]} mt={2} width={[0.8, 0.5]} color="primaryShade1">
+        Software Engineer from Portugal
+      </StyledCopy>
+    </>
+  )
+}

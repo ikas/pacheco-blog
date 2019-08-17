@@ -5,6 +5,7 @@
   "author": "Henrique Pacheco <henriquejcpacheco@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.6",
+    "detect-browser": "^4.6.0",
     "gatsby": "^2.13.1",
     "gatsby-image": "^2.2.4",
     "gatsby-plugin-google-analytics": "^2.1.1",

@@ -1,8 +1,11 @@
+import { detect } from 'detect-browser'
 import React from 'react'
 import styled from 'styled-components'
 
 import Heading from '../heading'
 import Copy from '../copy'
+
+const browser = detect()
 
 const StyledHeading = styled(Heading)`
   font-family: 'Mukta';
@@ -15,21 +18,23 @@ const StyledHeading = styled(Heading)`
   align-items: center;
   margin: 0;
 
+  ${props => browser.name !== 'safari' ? `
   background: linear-gradient(
-    to right, 
-    ${props => props.theme.colors.primary} 0%, 
-    ${props => props.theme.colors.secondary}, 
-    ${props => props.theme.colors.tertiary} 100%);
+    to right,
+    ${props.theme.colors.primary} 0%,
+    ${props.theme.colors.secondary},
+    ${props.theme.colors.tertiary} 100%);
   -webkit-background-clip: text;
   -webkit-text-stroke: 6px transparent;
   -webkit-text-fill-color: white;
+  ` : `color: ${props.theme.colors.primary};`}
 
-  @media(max-width: 768px) {
+  @media(max-width: 1024px) {
     font-size: 100px;
     line-height: 98px;
     -webkit-text-stroke: 4px transparent;
   }
-  
+
   @media(max-width: 544px) {
     font-size: 56px;
     line-height: 55px;
@@ -44,7 +49,7 @@ const StyledCopy = styled(Copy)`
   @media(max-width: 768px) {
     line-height: 29px;
   }
-  
+
   @media(max-width: 544px) {
     line-height: 22px;
   }

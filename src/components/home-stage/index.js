@@ -1,1 +1,1 @@
-export { default } from './home-stage-view'
+export { default } from './home-stage-container'

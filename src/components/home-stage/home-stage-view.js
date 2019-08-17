@@ -1,4 +1,3 @@
-import { detect } from 'detect-browser'
 import React from 'react'
 import styled from 'styled-components'
 
@@ -16,7 +15,9 @@ const StyledHeading = styled(Heading)`
   align-items: center;
   margin: 0;
 
-  ${props => props.browser !== 'safari' ? `
+  color: ${props => props.theme.colors.primary};
+
+  ${props => props.browserName !== 'safari' ? `
   background: linear-gradient(
     to right,
     ${props.theme.colors.primary} 0%,
@@ -24,8 +25,7 @@ const StyledHeading = styled(Heading)`
     ${props.theme.colors.tertiary} 100%);
   -webkit-background-clip: text;
   -webkit-text-stroke: 6px transparent;
-  -webkit-text-fill-color: white;
-  ` : `color: ${props.theme.colors.primary};`}
+  -webkit-text-fill-color: white;` : ''}
 
   @media(max-width: 1024px) {
     font-size: 100px;
@@ -53,16 +53,13 @@ const StyledCopy = styled(Copy)`
   }
 `
 
-export default () => {
-  const browser = detect()
-  return (
-    <>
-      <StyledHeading fontSize={[ 56, 100, 155 ]} browser={browser.name}>
-        Henrique<br/>Pacheco
-      </StyledHeading>
-      <StyledCopy fontSize={[ 20, 26, 30 ]} mt={2} width={[0.8, 0.5]} color="primaryShade1">
-        Software Engineer from Portugal
-      </StyledCopy>
-    </>
-  )
-}
+export default ({ browserName }) => (
+  <>
+    <StyledHeading fontSize={[56, 100, 155]} browserName={browserName}>
+      Henrique<br/>Pacheco
+    </StyledHeading>
+    <StyledCopy fontSize={[20, 26, 30]} mt={2} width={[0.8, 0.5]} color="primaryShade1">
+      Software Engineer from Portugal
+    </StyledCopy>
+  </>
+)

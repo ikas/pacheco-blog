@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 
 import BlogHeader from '../components/BlogHeader'
 import PostPreview from '../components/PostPreview'
-import Layout from '../components/Layout'
+import Layout from '../components/layout'
 import Container from '../components/container'
 
 const BlogPage = ({

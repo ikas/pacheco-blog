@@ -4,9 +4,10 @@
   "version": "1.0.0",
   "author": "Henrique Pacheco <henriquejcpacheco@gmail.com>",
   "dependencies": {
+    "@material-ui/core": "^4.3.2",
     "babel-plugin-styled-components": "^1.10.6",
     "detect-browser": "^4.6.0",
-    "gatsby": "^2.13.1",
+    "gatsby": "^2.13.67",
     "gatsby-image": "^2.2.4",
     "gatsby-plugin-google-analytics": "^2.1.1",
     "gatsby-plugin-layout": "^1.1.0",
@@ -24,7 +25,7 @@
     "react-dom": "^16.8.6",
     "react-expand-animated": "^1.0.0",
     "react-helmet": "^5.2.0",
-    "react-socks": "^1.0.1",
+    "react-socks": "^2.0.2",
     "styled-components": "^4.3.2",
     "styled-system": "^5.0.12"
   },

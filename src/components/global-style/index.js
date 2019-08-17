@@ -3,7 +3,12 @@ import { createGlobalStyle } from 'styled-components'
 export default createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Work+Sans:300,400,600,700&display=swap');
   @import url('https://fonts.googleapis.com/css?family=Mukta&display=swap');
-  
+
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+
   body {
     font-family: 'Work Sans', sans-serif;
     background: #fff;
@@ -18,5 +23,9 @@ export default createGlobalStyle`
 
   body a {
     cursor: none !important;
+  }
+
+  body #___gatsby, body #gatsby-focus-wrapper {
+    height: 100%;
   }
 `

@@ -8,9 +8,10 @@ import Scroll from '../components/scroll'
 const ScreenWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
+  flex: 1 1 auto;
 `
-  
+
 const HomeFeature = styled.div`
   flex: 1;
   display: flex;

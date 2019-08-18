@@ -30,7 +30,7 @@ const PostCard = styled(Anchor)`
 export default ({ posts }) => (
   <Wrapper>
     <Container maxWidth={686}>
-      <Heading level={2}>Blog</Heading>
+      <Heading level={2} mt={7}>Blog</Heading>
       <GridWrapper>
         { posts.map(p => (
           <PostCard key={p.node.id} to={p.node.frontmatter.path}>

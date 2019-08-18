@@ -15,8 +15,24 @@ setDefaultBreakpoints([
 ])
 
 class LayoutContainer extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      frameVisible: true,
+    }
+  }
+
+  componentDidMount() {
+    if (typeof window !== 'undefined') {
+      window.onscroll = () => window.pageYOffset === 0
+        ? this.setState({ frameVisible: true })
+        : this.setState({ frameVisible: false })
+    }
+  }
+
   render() {
-    return <LayoutView {...this.props} />
+    return <LayoutView {...this.props} frameVisible={this.state.frameVisible} />
   }
 }
 

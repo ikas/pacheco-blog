@@ -11,7 +11,7 @@ import theme from '../../theme'
 
 const routeWithoutBorder = (route) => route.includes('about')
 
-export default ({ children, location }) => (
+export default ({ children, frameVisible, location }) => (
   <ThemeProvider theme={theme}>
     <StaticQuery
       query={graphql`
@@ -32,12 +32,12 @@ export default ({ children, location }) => (
               { name: 'description', content: 'I’m Henrique, a Software Engineer from Braga, Portugal, working on full-stack development, from Node.js services to Client-Side Web applications. I’m into web technologies, clean and scalable solutions and remote working.' },
               { name: 'keywords', content: 'software, engineer, braga, portugal, remote, frontend, ui, ux, programming, blog' },
             ]}
-          >
+            >
             <html lang="en" />
             <meta name="google-site-verification" content="btqk2CUsVOmjOPgskaPb_R7MazjerdUKxqwaYNUTM0o" />
           </Helmet>
           {children}
-          <Frame width={routeWithoutBorder(location.pathname) ? 0 : undefined} />
+          <Frame width={routeWithoutBorder(location.pathname) || !frameVisible ? 0 : undefined} />
           <Cursor />
         </BreakpointProvider>
       )}

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { graphql } from 'gatsby'
 
 import BlogGallery from '../components/blog-gallery'
 import Footer from '../components/ui-footer'

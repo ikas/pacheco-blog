@@ -7,9 +7,7 @@ import Layout from '../components/layout'
 import Container from '../components/container'
 
 const BlogPage = ({
-  data: {
-    allMarkdownRemark: { edges },
-  },
+  data: { allMarkdownRemark: { edges }},
 }) => {
   const posts = edges.filter(edge => edge.node.frontmatter.featured)
     .map(edge => <PostPreview key={edge.node.id} post={edge.node} />)

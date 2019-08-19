@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import Anchor from '../anchor'
 import Copy from '../copy'
 import Heading from '../heading'
+import PostCategory from '../post-category'
 
 const PostCard = styled(Anchor)`
   width: 48%;
@@ -36,6 +37,7 @@ export default ({ post }) => (
     <Image style={{ backgroundImage: `url(${post.image})` }} />
     <PostInfoWrapper>
       <Heading my={0} level={5}>{post.title}</Heading>
+      <PostCategory>{post.category}</PostCategory>
       <Copy mb={0} fontSize={1} color="primaryShade2">{post.date}</Copy>
     </PostInfoWrapper>
   </PostCard>

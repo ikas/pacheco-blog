@@ -6,6 +6,7 @@ author:      "Henrique Pacheco"
 description: "The power of a Unix terminal is still unreachable!"
 category:    "Tech"
 featured:    true
+image:       "https://images.unsplash.com/photo-1508830524289-0adcbe822b40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1311&q=80"
 ---
 
 Hey :)

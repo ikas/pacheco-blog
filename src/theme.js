@@ -11,6 +11,7 @@ export default {
     primary: '#303D5D',
     primaryShade1: 'rgba(48, 61, 93, 0.9)',
     primaryShade2: 'rgba(48, 61, 93, 0.7)',
+    primaryShade3: 'rgba(48, 61, 93, 0.5)',
     secondary: '#899CBC',
     tertiary: '#C2D987',
     white: '#FFFFFF',
@@ -22,5 +23,6 @@ export default {
     header: 1,
     footer: 1,
     cursor: 10,
-  }
+  },
+  transitionEasingFunction: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
 }

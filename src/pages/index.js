@@ -57,7 +57,8 @@ export const pageQuery = graphql`
             path
             title
             featured
-
+            image
+            category
           }
         }
       }

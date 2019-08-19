@@ -6,6 +6,7 @@ author:      "Henrique Pacheco"
 description: "A magnificent journey through the history of humankind."
 category:    "Books"
 featured:    true
+image:       "https://images.unsplash.com/photo-1561319111-12fcb987d969?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
 ---
 
 {% include image.html url="/assets/img/posts/sapeins-book-cover.jpg" description="Sapiens - A Brief History of Humankind (book cover)." width="360" %}

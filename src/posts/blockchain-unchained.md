@@ -60,4 +60,4 @@ I hope this post has raised your interest on finding out more about blockchains.
 [shai-rubin-link]: https://www.youtube.com/watch?v=93E_GzvpMA0
 [ethereum-app-link]: https://www.youtube.com/watch?v=T3X7hfltr8c
 
-[img-blockchain-example]: https://raw.githubusercontent.com/ikas/ikas.github.io/8e9d6ed4b5d1885c25206d5ce05aa1acf08423e4/assets/img/posts/blockchain-example.png "An example of a blockchain"
+[img-blockchain-example]: /posts/blockchain-example.png

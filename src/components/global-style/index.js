@@ -23,6 +23,8 @@ export default createGlobalStyle`
 
   body a {
     cursor: none !important;
+    text-decoration: none;
+    color: inherit;
   }
 
   body #___gatsby, body #gatsby-focus-wrapper {

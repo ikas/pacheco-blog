@@ -1,11 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
+import { graphql } from 'gatsby'
 
-import HomeStage from '../components/home-stage'
+import BlogGallery from '../components/blog-gallery'
+import Footer from '../components/ui-footer'
 import Header from '../components/ui-header'
+import HomeStage from '../components/home-stage'
 import Scroll from '../components/scroll'
 
-const ScreenWrapper = styled.div`
+const FullHeightWrapper = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -20,12 +23,37 @@ const HomeFeature = styled.div`
   justify-content: center;
 `
 
-export default () => (
-  <ScreenWrapper>
-    <Header currentUrl="/" />
-    <HomeFeature>
-      <HomeStage />
-    </HomeFeature>
-    <Scroll />
-  </ScreenWrapper>
+export default ({ data: { allMarkdownRemark: { edges }} }) => (
+  <>
+    <FullHeightWrapper>
+      <Header currentUrl="/" />
+      <HomeFeature>
+        <HomeStage />
+      </HomeFeature>
+      <Scroll />
+    </FullHeightWrapper>
+    <BlogGallery posts={edges} />
+    <Footer />
+  </>
 )
+
+export const pageQuery = graphql`
+  query {
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+      edges {
+        node {
+          id
+          excerpt(pruneLength: 250)
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            path
+            title
+            featured
+            image
+            category
+          }
+        }
+      }
+    }
+  }
+`

@@ -6,7 +6,7 @@ author:      "Henrique Pacheco"
 description: "An introduction to blockchain, crypto currencies and how they can change our lives."
 category:    "Tech"
 featured:    true
-image:       "https://images.unsplash.com/photo-1526378800651-c32d170fe6f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80"
+image:       "/posts/blockchain.png"
 ---
 
 I'm a bit skeptical when it comes to revolutionary products or services - more often than not, it's just someone wanting to take advantage of people's lack of knowledge (or naiveness) to make money out of it. But, although I believe that there is still some lack of knowledge about **blockchain**, it does seem to be a technology that is here to stay and revolutionize the world as we know it.
@@ -48,7 +48,7 @@ If you are interested in this subject, there are **a ton of resources** that you
 * [Shai Rubin, CTO of Citi Innovation Lab, explaining blockchain concepts][shai-rubin-link]
 * [Build An Ethereum Hello World Blockchain Application In A Private Network][ethereum-app-link]
 
-I hope this post has raised your interest on finding out more about blockchains. See you next time!
+I hope this post raised your interest on finding out more about blockchains. See you next time!
 
 [satoshi-link]: https://en.wikipedia.org/wiki/Satoshi_Nakamoto
 [bitcoin-link]: https://en.wikipedia.org/wiki/Bitcoin

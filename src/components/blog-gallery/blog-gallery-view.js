@@ -5,8 +5,8 @@ import Container from '../container'
 import Heading from '../heading'
 import PostCard from '../post-card'
 
-const Wrapper = styled.div`
-  background: ${props => props.theme.colors.white};
+const Wrapper = styled(Container)`
+  align-items: center;
 `
 
 const GridWrapper = styled.div`
@@ -18,12 +18,10 @@ const GridWrapper = styled.div`
 `
 
 export default ({ posts }) => (
-  <Wrapper>
-    <Container maxWidth={900}>
-      <Heading level={2} mt={7}>Blog</Heading>
-      <GridWrapper>
-        { posts.map(p => <PostCard key={p.node.id} post={p.node.frontmatter} />)}
-      </GridWrapper>
-    </Container>
+  <Wrapper maxWidth={900}>
+    <Heading level={2} mt={7}>Blog</Heading>
+    <GridWrapper>
+      { posts.map(p => <PostCard key={p.node.id} post={p.node.frontmatter} />)}
+    </GridWrapper>
   </Wrapper>
 )

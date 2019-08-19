@@ -32,7 +32,7 @@ storiesOf('UI - Container', module)
     <>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
-        <Container bg="primary" maxWidth={686}>
+        <Container bg="primary" maxWidth={768}>
           <Copy color="white">example content</Copy>
         </Container>
       </ThemeProvider>

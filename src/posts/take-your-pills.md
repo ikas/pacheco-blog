@@ -1,11 +1,11 @@
 ---
-path:        "/blog/blockchain-unchained"
+path:        "/blog/take-your-pills-documentary-review"
 title:       "Take your pills (Documentary review)"
 date:        "2018-03-24"
 author:      "Henrique Pacheco"
 description: "A take on the growing dependency on cognitive enhancement meds."
 category:    "Documentaries"
-featured:    false
+featured:    true
 image:       "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
 ---
 

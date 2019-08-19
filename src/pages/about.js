@@ -10,7 +10,7 @@ import Footer from '../components/ui-footer'
 export default () => (
   <>
     <Header currentUrl="/about" />
-    <Container maxWidth={686} px={[3, 4]}>
+    <Container maxWidth={768} px={[3, 4]}>
       <Hello />
       <Experience />
       <Social />

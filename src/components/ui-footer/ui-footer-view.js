@@ -14,7 +14,7 @@ const Footer = styled.footer`
 
 export default () => (
   <Footer bg="primary">
-    <Container maxWidth={686}>
+    <Container maxWidth={768}>
       <Copy color="white" mx={0} my={2}>Henrique Pacheco</Copy>
     </Container>
   </Footer>

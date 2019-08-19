@@ -5,18 +5,18 @@ import Container from '../components/container'
 import Footer from '../components/ui-footer'
 import Header from '../components/ui-header'
 import PostContent from '../components/post-content'
+import PostImage from '../components/post-image'
 import PostInfo from '../components/post-info'
-import PostHeader from '../components/post-header'
 
 export default function Template({ data }) {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
   return (
     <>
-      <Header />
-      <PostHeader title={frontmatter.title} description={frontmatter.description} />
-      <Container maxWidth={686}>
+      <Header currentUrl="/blog" />
+      <Container maxWidth={768}>
         <PostInfo {...frontmatter} />
+        <PostImage src={frontmatter.image} alt={frontmatter.title} />
         <PostContent html={html} />
       </Container>
       <Footer />
@@ -35,6 +35,7 @@ export const pageQuery = graphql`
         author
         description
         category
+        image
       }
     }
   }

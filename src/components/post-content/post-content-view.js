@@ -22,6 +22,11 @@ const PostContentWrapper = styled.div`
     color: ${props => props.theme.colors.secondary};
     font-weight: bold;
   }
+
+  img {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
 `
 
 const BlogPostContent = ({ html }) => (

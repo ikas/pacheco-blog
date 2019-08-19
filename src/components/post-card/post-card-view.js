@@ -7,12 +7,14 @@ import Heading from '../heading'
 import PostCategory from '../post-category'
 
 const PostCard = styled(Anchor)`
-  width: 48%;
+  flex-basis: 45%;
   box-shadow: 0px 0px 10px 0px ${props => props.theme.colors.primaryShade3};
   border-radius: 5px;
+  margin-left: 12px;
+  margin-right: 12px;
   margin-bottom: 24px;
   text-decoration: none;
-  transition: all 0.3s ${props => props.theme.transitionEasingFunction} 0.2s;
+  transition: all 0.3s ${props => props.theme.transitionEasingFunction};
 
   &:hover {
     transform: scale(1.02);

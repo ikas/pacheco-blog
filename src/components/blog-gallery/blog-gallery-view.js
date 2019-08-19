@@ -12,7 +12,7 @@ const Wrapper = styled.div`
 const GridWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 128px;
 `

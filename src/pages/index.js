@@ -23,27 +23,19 @@ const HomeFeature = styled.div`
   justify-content: center;
 `
 
-export default  ({
-  data: { allMarkdownRemark: { edges }},
-}) => {
-  const posts = edges.filter(edge => edge.node.frontmatter.featured)
-
-  return (
-    <>
-      <FullHeightWrapper>
-        <Header currentUrl="/" />
-        <HomeFeature>
-          <HomeStage />
-        </HomeFeature>
-        <Scroll />
-      </FullHeightWrapper>
-
-      <BlogGallery posts={posts} />
-
-      <Footer />
-    </>
-  )
-}
+export default ({ data: { allMarkdownRemark: { edges }} }) => (
+  <>
+    <FullHeightWrapper>
+      <Header currentUrl="/" />
+      <HomeFeature>
+        <HomeStage />
+      </HomeFeature>
+      <Scroll />
+    </FullHeightWrapper>
+    <BlogGallery posts={edges} />
+    <Footer />
+  </>
+)
 
 export const pageQuery = graphql`
   query {

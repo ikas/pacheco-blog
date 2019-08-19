@@ -9,7 +9,7 @@ import Frame from '../full-screen-frame'
 import Cursor from '../cursor'
 import theme from '../../theme'
 
-const routeWithoutBorder = (route) => route.includes('about')
+const routeWithoutBorder = (route) => route.includes('about') || route.includes('blog')
 
 export default ({ children, frameVisible, location }) => (
   <ThemeProvider theme={theme}>

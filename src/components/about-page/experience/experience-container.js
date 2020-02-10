@@ -5,21 +5,32 @@ import ExperienceView from './experience-view'
 export default class ExperienceContainer extends React.Component {
   render() {
     const experiences = [
-      { 
-        from: 'July 2018', 
-        to: 'Now', 
-        title: 'Remote Software Engineer', 
-        skills: ' JavaScript / Node.JS / React Native / React / Redux',
+      {
+        from: 'November 2019',
+        to: 'Now',
+        title: 'Backend Engineer @ Vizzuality',
+        skills: 'Node.JS / Ruby / Docker / Kubernetes / AWS',
+        items: [
+          'Designing and developing cross-functional systems to process and serve large amounts of data in the cloud, often in real-time, and ensuring their craftsmanship, availability, resilience, and scalability.',
+          'Technological stack composed of NodeJS, Rails and some Python, as well as technologies such as Kubernetes, Terraform and AWS for infrastructure management.',
+          'Ensuring software quality, robustness and compliance with standards by reviewing code, documenting, and creating automated tests.',
+        ],
+      },
+      {
+        from: '2018',
+        to: '2019',
+        title: 'Remote Software Engineer',
+        skills: 'JavaScript / Node.JS / React Native / React / Redux',
         items: [
           'Participation in multiple software projects as part of a network of remote workers.',
           'Development of micro services based in Node.JS (Express) and MySQL.',
           'UI/UX of multiple mobile applications using React Native.',
         ],
       },
-      { 
-        from: '2014', 
-        to: '2018', 
-        title: 'Beevo', 
+      {
+        from: '2014',
+        to: '2018',
+        title: 'Beevo',
         skills: 'E-commerce / PHP / HTML / CSS / JavaScript',
         items: [
           'Development of web platforms focused on B2B/B2C e-commerce targeted at medium and large scale businesses.',
@@ -28,10 +39,10 @@ export default class ExperienceContainer extends React.Component {
           'Full stack web development & Product team leader during the last year.',
         ],
       },
-      { 
-        from: '2011', 
-        to: '2018', 
-        title: 'BSc + MSc Software Engineering', 
+      {
+        from: '2011',
+        to: '2018',
+        title: 'BSc + MSc Software Engineering',
         skills: 'University of Minho, Braga, Portugal',
         items: [
           'Master\'s thesis on usability engineering - development of widgets for an open-source prototyping tool (PVSio-Web).',

@@ -6,8 +6,19 @@ export default class ExperienceContainer extends React.Component {
   render() {
     const experiences = [
       {
-        from: 'November 2019',
+        from: 'Jan 2022',
         to: 'Now',
+        title: 'Backend Engineer @ Deel',
+        skills: 'Node.JS / Typescript / Docker / Kubernetes / AWS',
+        items: [
+          'Working on a product shaping the future of global hiring around the world.',
+          'Technological stack composed of NodeJS/Typescript, alongside PostgreSQL and Docker for local development.',
+          'High focus on software quality, robustness and compliance, with standards by reviewing code, documenting, and creating automated tests.',
+        ],
+      },
+      {
+        from: '2019',
+        to: '2021',
         title: 'Backend Engineer @ Vizzuality',
         skills: 'Node.JS / Ruby / Docker / Kubernetes / AWS',
         items: [

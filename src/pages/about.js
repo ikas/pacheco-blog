@@ -7,7 +7,7 @@ import Experience from '../components/about-page/experience'
 import Social from '../components/about-page/social'
 import Footer from '../components/ui-footer'
 
-export default () => (
+const AboutPage = () => (
   <>
     <Header currentUrl="/about" />
     <Container maxWidth={768} px={[3, 4]}>
@@ -18,3 +18,5 @@ export default () => (
     <Footer />
   </>
 )
+
+export default AboutPage;

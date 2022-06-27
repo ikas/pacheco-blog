@@ -53,7 +53,7 @@ const StyledCopy = styled(Copy)`
   }
 `
 
-export default ({ browserName }) => (
+const HomeStageView = ({ browserName }) => (
   <>
     <StyledHeading fontSize={[56, 100, 155]} browserName={browserName}>
       Henrique<br/>Pacheco
@@ -63,3 +63,5 @@ export default ({ browserName }) => (
     </StyledCopy>
   </>
 )
+
+export default HomeStageView;

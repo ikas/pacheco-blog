@@ -14,7 +14,7 @@ const Outer = styled.div`
   pointer-events: none;
   z-index: ${props => props.theme.zIndexes.cursor};
 `
-  
+
 const Inner = styled.div`
   transition: transform 1s ease;
   transform: scale3d(1, 1, 1);
@@ -29,9 +29,11 @@ const Inner = styled.div`
   z-index: ${props => props.theme.zIndexes.header};
 `
 
-export default () => (
+const CursorView = () => (
   <div>
     <Outer className="pointer-outer"></Outer>
     <Inner className="pointer-inner"></Inner>
   </div>
 )
+
+export default CursorView;

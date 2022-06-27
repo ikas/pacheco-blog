@@ -28,13 +28,13 @@ const HeaderAnchors = styled(Anchor)`
     transform: translateX(5px) scale3d(0,1,1);
     transition: transform 0.25s ease;
   }
-  
+
   &.active::after, &:hover::after {
     transform: translateX(5px) scale3d(1,1,1);
   }
 `
 
-export default ({ currentUrl }) => (
+const UIHeaderView = ({ currentUrl }) => (
   <Container>
     <Header px={[3, 4]} pt={5}>
       <HeaderAnchors to="/" className={currentUrl === '/' ? 'active' : ''}>Home</HeaderAnchors>
@@ -42,3 +42,5 @@ export default ({ currentUrl }) => (
     </Header>
   </Container>
 )
+
+export default UIHeaderView;

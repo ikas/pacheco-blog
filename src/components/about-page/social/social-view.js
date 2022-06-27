@@ -15,7 +15,7 @@ const StyledAnchor = styled(Anchor)`
   text-decoration: none;
 `
 
-export default () => (
+const SocialView = () => (
   <Wrapper mb={[6, 7]}>
     <Heading level={2} mt={4} mb={3}>Social</Heading>
     <StyledAnchor type="a" href="https://github.com/ikas">
@@ -29,3 +29,5 @@ export default () => (
     </StyledAnchor>
   </Wrapper>
 )
+
+export default SocialView;

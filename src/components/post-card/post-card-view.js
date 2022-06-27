@@ -34,7 +34,7 @@ const PostInfoWrapper = styled.div`
   padding: 16px;
 `
 
-export default ({ post }) => (
+const PostCardView = ({ post }) => (
   <PostCard to={post.path}>
     <Image style={{ backgroundImage: `url(${post.image})` }} />
     <PostInfoWrapper>
@@ -44,3 +44,5 @@ export default ({ post }) => (
     </PostInfoWrapper>
   </PostCard>
 )
+
+export default PostCardView;

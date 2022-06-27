@@ -15,4 +15,6 @@ const Copy = styled.p`
   font-weight: normal;
 `
 
-export default (props) => <Copy {...props} />
+const CopyView = (props) => <Copy {...props} />
+
+export default CopyView;

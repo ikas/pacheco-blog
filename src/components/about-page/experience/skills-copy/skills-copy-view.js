@@ -12,4 +12,6 @@ const SkillsCopy = styled(Copy)`
   }
 `
 
-export default props => <SkillsCopy color="secondary" mb={0} mt={1} {...props} />
+const SkillsCopyView = props => <SkillsCopy color="secondary" mb={0} mt={1} {...props} />
+
+export default SkillsCopyView;

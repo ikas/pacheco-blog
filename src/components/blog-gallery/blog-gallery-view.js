@@ -17,7 +17,7 @@ const GridWrapper = styled.div`
   margin-bottom: 128px;
 `
 
-export default ({ posts }) => (
+const BlogGalleryView = ({ posts }) => (
   <Wrapper maxWidth={900}>
     <Heading level={2} mt={7}>Blog</Heading>
     <GridWrapper>
@@ -25,3 +25,5 @@ export default ({ posts }) => (
     </GridWrapper>
   </Wrapper>
 )
+
+export default BlogGalleryView;

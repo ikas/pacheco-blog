@@ -71,7 +71,7 @@ const Heading5 = styled.h5`
   text-transform: uppercase;
 `
 
-export default ({ level, ...props }) => {
+const HeadingView = ({ level, ...props }) => {
   switch (level) {
     case 1:
       return <Heading1 {...props} />
@@ -85,3 +85,5 @@ export default ({ level, ...props }) => {
       return <Heading5 {...props} />
   }
 }
+
+export default HeadingView;

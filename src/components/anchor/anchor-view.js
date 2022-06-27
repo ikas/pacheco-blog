@@ -33,6 +33,8 @@ const Anchor = styled.a`
   }
 `
 
-export default ({ type = 'Link', ...props }) => {
+const AnchorView = ({ type = 'Link', ...props }) => {
   return type === 'Link' ? <RouterLink {...props} /> : <Anchor {...props} />
 }
+
+export default AnchorView;

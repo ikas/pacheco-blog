@@ -31,18 +31,18 @@ const TitleWrapper = styled.div`
   flex: 1;
 `
 
-export default ({ experiences }) => {
+const ExperienceView = ({ experiences }) => {
   // Use open indexes to manage collapsible sections currently opened
   const [ openIndexes, setOpenIndexes ] = useState([])
   const [ hoveredIndex, setHoveredIndex ] = useState()
 
   // Method that toggles as open or closed the provided idx
-  const getNewIndexes = (current, idx) => { 
+  const getNewIndexes = (current, idx) => {
     // If idx exists in current, remove it
     if (current.includes(idx)) {
       const currIdx = current.indexOf(idx)
       return [
-        ...current.slice(0, currIdx), 
+        ...current.slice(0, currIdx),
         ...current.slice(currIdx + 1)
       ]
     // If it does not exist, add it
@@ -50,20 +50,20 @@ export default ({ experiences }) => {
       return current.concat([idx])
     }
   }
-  
+
   return (
     <div>
       <Heading level={2} mt={6} mb={5}>Experience</Heading>
       { experiences.map((exp, idx) => (
           <ExperienceItemWrapper key={idx} mb={5}>
-            <HeadingWrapper 
+            <HeadingWrapper
               onMouseEnter={() => setHoveredIndex(idx)}
               onMouseLeave={() => setHoveredIndex(undefined)}
               onClick={() => setOpenIndexes(getNewIndexes(openIndexes, idx))}
             >
               <TitleWrapper>
-                <TitleCopy 
-                  hovered={idx === hoveredIndex} 
+                <TitleCopy
+                  hovered={idx === hoveredIndex}
                   active={openIndexes.includes(idx)}
                 >
                   {exp.title}
@@ -75,7 +75,7 @@ export default ({ experiences }) => {
                 </Breakpoint>
                 <SkillsCopy>{exp.skills}</SkillsCopy>
               </TitleWrapper>
-              
+
               <Breakpoint m up>
                 <DatesCopy hovered={idx === hoveredIndex}>
                   {exp.from} - {exp.to}
@@ -95,3 +95,5 @@ export default ({ experiences }) => {
     </div>
   )
 }
+
+export default ExperienceView;

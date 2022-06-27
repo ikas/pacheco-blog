@@ -6,7 +6,7 @@ breakpoints.md = breakpoints[1]
 breakpoints.lg = breakpoints[2]
 breakpoints.xl = breakpoints[3]
 
-export default {
+const theme = {
   colors: {
     primary: '#303D5D',
     primaryShade1: 'rgba(48, 61, 93, 0.9)',
@@ -25,4 +25,6 @@ export default {
     cursor: 10,
   },
   transitionEasingFunction: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
-}
+};
+
+export default theme;

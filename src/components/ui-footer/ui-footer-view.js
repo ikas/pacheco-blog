@@ -12,10 +12,12 @@ const Footer = styled.footer`
   z-index: ${props => props.theme.zIndexes.footer};
 `
 
-export default () => (
+const UiFooterView = () => (
   <Footer bg="primary">
     <Container maxWidth={768}>
       <Copy color="white" mx={0} my={2}>Henrique Pacheco</Copy>
     </Container>
   </Footer>
 )
+
+export default UiFooterView;

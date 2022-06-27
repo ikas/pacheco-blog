@@ -23,7 +23,7 @@ const HomeFeature = styled.div`
   justify-content: center;
 `
 
-export default ({ data: { allMarkdownRemark: { edges }} }) => (
+const HomePage = ({ data: { allMarkdownRemark: { edges }} }) => (
   <>
     <FullHeightWrapper>
       <Header currentUrl="/" />
@@ -57,3 +57,5 @@ export const pageQuery = graphql`
     }
   }
 `
+
+export default HomePage;

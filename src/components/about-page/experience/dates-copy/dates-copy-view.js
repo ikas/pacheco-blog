@@ -8,6 +8,8 @@ const DatesCopy = styled(Copy)`
   line-height: 33px;
 `
 
-export default props => (
+const DatesCopyView = props => (
   <DatesCopy mb={0} color={props.hovered ? 'primary' : 'primaryShade2'} {...props} />
-)
+);
+
+export default DatesCopyView;

@@ -27,9 +27,11 @@ const Ellipsis = styled.div`
   margin-bottom: 32px;
 `
 
-export default () => (
+const ScrollView = () => (
   <Wrapper>
     <ScrollText>Scroll</ScrollText>
     <Ellipsis />
   </Wrapper>
 )
+
+export default ScrollView;

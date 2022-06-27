@@ -14,9 +14,11 @@ const PostImage = styled.img`
   width: 100%;
 `
 
-export default props => (
+const PostImageView = props => (
   <Wrapper>
     <PostImage {...props} />
     <Copy fontSize={1} color="primaryShade2">{props.alt}</Copy>
   </Wrapper>
 )
+
+export default PostImageView;

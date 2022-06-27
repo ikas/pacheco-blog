@@ -11,7 +11,7 @@ import theme from '../../theme'
 
 const routeWithoutBorder = (route) => route.includes('about') || route.includes('blog')
 
-export default ({ children, frameVisible, location }) => (
+const LayoutView = ({ children, frameVisible, location }) => (
   <ThemeProvider theme={theme}>
     <StaticQuery
       query={graphql`
@@ -44,3 +44,5 @@ export default ({ children, frameVisible, location }) => (
     />
   </ThemeProvider>
 )
+
+export default LayoutView;

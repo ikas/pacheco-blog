@@ -40,8 +40,10 @@ LayoutContainer.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default props => (
+const LayoutContainerComponent = props => (
   <Location>
     {({ location }) => <LayoutContainer location={location} {...props} />}
   </Location>
 )
+
+export default LayoutContainerComponent;

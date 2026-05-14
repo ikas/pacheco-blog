@@ -1,1 +1,0 @@
-export { default } from './full-screen-frame-view'

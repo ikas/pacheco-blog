@@ -2,6 +2,7 @@
   "version": 2,
   "name": "pacheco-blog",
   "alias": ["henriquepacheco.com"],
+  "framework": "astro",
   "buildCommand": "npm run build",
   "outputDirectory": "dist"
 }

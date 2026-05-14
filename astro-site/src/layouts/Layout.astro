@@ -37,6 +37,7 @@ const {
     </script>
   </head>
   <body>
+    <div id="screen-frame" data-home={currentUrl === '/' ? 'true' : 'false'} aria-hidden="true"></div>
     <Header currentUrl={currentUrl} />
     <main>
       <slot />
@@ -45,3 +46,33 @@ const {
     <Cursor />
   </body>
 </html>
+
+<style>
+  #screen-frame {
+    position: fixed;
+    inset: 0;
+    border: 0px solid var(--color-primary);
+    pointer-events: none;
+    z-index: 100;
+    transition: border-width 0.2s var(--ease) 0.3s;
+  }
+
+  #screen-frame[data-home='true'].visible {
+    border-width: 16px;
+  }
+
+  @media (max-width: 544px) {
+    #screen-frame[data-home='true'].visible {
+      border-width: 8px;
+    }
+  }
+</style>
+
+<script>
+  const frame = document.getElementById('screen-frame');
+  if (frame && frame.dataset.home === 'true') {
+    requestAnimationFrame(() => {
+      frame.classList.add('visible');
+    });
+  }
+</script>

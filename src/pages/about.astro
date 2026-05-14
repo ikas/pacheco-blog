@@ -3,14 +3,36 @@ import Layout from '../layouts/Layout.astro';
 
 const experiences = [
   {
-    from: 'Jan 2022',
+    from: 'Oct 2025',
     to: 'Now',
+    title: 'Senior Tech Lead @ Deel',
+    skills: 'Node.JS / Typescript / Docker / Kubernetes / AWS',
+    items: [
+      'Leading the engineering teams of the Payroll Core vertical, working closely with their tech leads.',
+      'Supporting tech leads in making architectural decisions, upholding code quality, and driving delivery.',
+      'Bridging engineering, product, and design to align on direction and ship impactful payroll features.',
+    ],
+  },
+  {
+    from: 'Feb 2023',
+    to: 'Oct 2025',
+    title: 'Tech Lead @ Deel',
+    skills: 'Node.JS / Typescript / Docker / Kubernetes / AWS',
+    items: [
+      'Led the G2N (Gross to Net) team, one of the most central parts of payroll processing at Deel.',
+      'Guided the team in building features that ensure the quality and accuracy of payroll runs at global scale.',
+      'Supported engineers in technical growth while driving delivery of complex, high-impact payroll capabilities.',
+    ],
+  },
+  {
+    from: 'Jan 2022',
+    to: 'Feb 2023',
     title: 'Backend Engineer @ Deel',
     skills: 'Node.JS / Typescript / Docker / Kubernetes / AWS',
     items: [
-      'Working on a product shaping the future of global hiring around the world.',
-      'Technological stack composed of NodeJS/Typescript, alongside PostgreSQL and Docker for local development.',
-      'High focus on software quality, robustness and compliance, with standards by reviewing code, documenting, and creating automated tests.',
+      'Helped bring the Global Payroll product to life, supporting the first customers from day one.',
+      'Contributed to building a platform that enables payroll processing across multiple countries globally.',
+      'Handled the growth and scale challenges as the product expanded its customer base.',
     ],
   },
   {
@@ -94,7 +116,6 @@ const experiences = [
       <ul class="social-list">
         <li><a class="social-link" href="https://github.com/ikas" target="_blank" rel="noopener noreferrer">Github</a></li>
         <li><a class="social-link" href="https://www.linkedin.com/in/henrique-pacheco/" target="_blank" rel="noopener noreferrer">Linkedin</a></li>
-        <li><a class="social-link" href="https://www.instagram.com/henriquejcpacheco" target="_blank" rel="noopener noreferrer">Instagram</a></li>
       </ul>
     </div>
   </section>
@@ -172,7 +193,8 @@ const experiences = [
   .exp-title {
     font-family: var(--font-body);
     font-size: 1.25rem;
-    font-weight: 700;
+    font-weight: 400;
+    text-transform: uppercase;
     color: var(--color-primary);
     margin: 0 0 var(--space-1);
     transition: opacity var(--transition);
@@ -227,7 +249,8 @@ const experiences = [
   .social-link {
     font-family: var(--font-body);
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 400;
+    text-transform: uppercase;
     color: var(--color-primary);
     text-decoration: none;
     transition: opacity var(--transition);

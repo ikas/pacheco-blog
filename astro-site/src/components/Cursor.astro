@@ -1,0 +1,66 @@
+---
+---
+
+<div id="cursor-outer" aria-hidden="true"></div>
+<div id="cursor-inner" aria-hidden="true"></div>
+
+<style>
+  #cursor-outer,
+  #cursor-inner {
+    position: fixed;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 10;
+    top: 100px;
+    left: 100px;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease;
+  }
+
+  #cursor-outer {
+    width: 45px;
+    height: 45px;
+    border: 3px solid var(--color-primary);
+    opacity: 0.7;
+  }
+
+  #cursor-inner {
+    width: 5px;
+    height: 5px;
+    background: var(--color-primary);
+  }
+</style>
+
+<script>
+  const outer = document.getElementById('cursor-outer')!;
+  const inner = document.getElementById('cursor-inner')!;
+
+  let mx = 100, my = 100;
+  let ox = 100, oy = 100;
+  let ix = 100, iy = 100;
+
+  document.addEventListener('mousemove', (e) => {
+    mx = e.clientX;
+    my = e.clientY;
+  });
+
+  function lerp(a: number, b: number, t: number) {
+    return a + (b - a) * t;
+  }
+
+  function tick() {
+    ox = lerp(ox, mx, 0.15);
+    oy = lerp(oy, my, 0.15);
+    ix = lerp(ix, mx, 0.4);
+    iy = lerp(iy, my, 0.4);
+
+    outer.style.left = ox + 'px';
+    outer.style.top  = oy + 'px';
+    inner.style.left = ix + 'px';
+    inner.style.top  = iy + 'px';
+
+    requestAnimationFrame(tick);
+  }
+
+  tick();
+</script>

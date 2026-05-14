@@ -1,0 +1,78 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Cursor from '../components/Cursor.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  currentUrl?: string;
+}
+
+const {
+  title = 'Henrique Pacheco: software engineer from Portugal',
+  description = "I'm Henrique, a Software Engineer from Braga, Portugal, working on full-stack development, from Node.js services to Client-Side Web applications. I'm into web technologies, clean and scalable solutions and remote working.",
+  currentUrl = '/',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="keywords" content="software, engineer, braga, portugal, remote, frontend, ui, ux, programming, blog" />
+    <meta name="google-site-verification" content="btqk2CUsVOmjOPgskaPb_R7MazjerdUKxqwaYNUTM0o" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <title>{title}</title>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-85742872-1"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-85742872-1');
+    </script>
+  </head>
+  <body>
+    <div id="screen-frame" data-home={currentUrl === '/' ? 'true' : 'false'} aria-hidden="true"></div>
+    <Header currentUrl={currentUrl} />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+    <Cursor />
+  </body>
+</html>
+
+<style>
+  #screen-frame {
+    position: fixed;
+    inset: 0;
+    border: 0px solid var(--color-primary);
+    pointer-events: none;
+    z-index: 100;
+    transition: border-width 0.2s var(--ease) 0.3s;
+  }
+
+  #screen-frame[data-home='true'].visible {
+    border-width: 16px;
+  }
+
+  @media (max-width: 544px) {
+    #screen-frame[data-home='true'].visible {
+      border-width: 8px;
+    }
+  }
+</style>
+
+<script>
+  const frame = document.getElementById('screen-frame');
+  if (frame && frame.dataset.home === 'true') {
+    requestAnimationFrame(() => {
+      frame.classList.add('visible');
+    });
+  }
+</script>

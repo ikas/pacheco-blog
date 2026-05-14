@@ -1,0 +1,254 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const experiences = [
+  {
+    from: 'Jan 2022',
+    to: 'Now',
+    title: 'Backend Engineer @ Deel',
+    skills: 'Node.JS / Typescript / Docker / Kubernetes / AWS',
+    items: [
+      'Working on a product shaping the future of global hiring around the world.',
+      'Technological stack composed of NodeJS/Typescript, alongside PostgreSQL and Docker for local development.',
+      'High focus on software quality, robustness and compliance, with standards by reviewing code, documenting, and creating automated tests.',
+    ],
+  },
+  {
+    from: '2019',
+    to: '2021',
+    title: 'Backend Engineer @ Vizzuality',
+    skills: 'Node.JS / Ruby / Docker / Kubernetes / AWS',
+    items: [
+      'Designing and developing cross-functional systems to process and serve large amounts of data in the cloud, often in real-time, and ensuring their craftsmanship, availability, resilience, and scalability.',
+      'Technological stack composed of NodeJS, Rails and some Python, as well as technologies such as Kubernetes, Terraform and AWS for infrastructure management.',
+      'Ensuring software quality, robustness and compliance with standards by reviewing code, documenting, and creating automated tests.',
+    ],
+  },
+  {
+    from: '2018',
+    to: '2019',
+    title: 'Remote Software Engineer',
+    skills: 'JavaScript / Node.JS / React Native / React / Redux',
+    items: [
+      'Participation in multiple software projects as part of a network of remote workers.',
+      'Development of micro services based in Node.JS (Express) and MySQL.',
+      'UI/UX of multiple mobile applications using React Native.',
+    ],
+  },
+  {
+    from: '2014',
+    to: '2018',
+    title: 'Beevo',
+    skills: 'E-commerce / PHP / HTML / CSS / JavaScript',
+    items: [
+      'Development of web platforms focused on B2B/B2C e-commerce targeted at medium and large scale businesses.',
+      'Participation in the development of the product using Phalcon framework.',
+      'Projects for national customers and alongside international teams.',
+      'Full stack web development & Product team leader during the last year.',
+    ],
+  },
+  {
+    from: '2011',
+    to: '2018',
+    title: 'BSc + MSc Software Engineering',
+    skills: 'University of Minho, Braga, Portugal',
+    items: [
+      "Master's thesis on usability engineering - development of widgets for an open-source prototyping tool (PVSio-Web).",
+      'Specialization in Business Intelligence and Applicational Architectures.',
+      'Also a bit of natural language processing and software testing.',
+    ],
+  },
+];
+---
+
+<Layout title="About — Henrique Pacheco" currentUrl="/about">
+  <section class="about-page">
+    <div class="container">
+      <h1 class="section-heading">Hello</h1>
+      <p class="bio">I'm Henrique, a Software Engineer from Braga, Portugal, working on full-stack development, from Node.js services to Client-Side Web applications.</p>
+      <p class="bio">I'm into web technologies, clean and scalable solutions and remote working.</p>
+      <p class="bio">Want to know more?</p>
+      <a class="contact-link" href="mailto:henriquejcpacheco@gmail.com">Get in touch</a>
+
+      <h2 class="section-heading exp-heading">Experience</h2>
+      <div class="experience-list" id="experience-list">
+        {experiences.map((exp, idx) => (
+          <div class="exp-item" data-idx={idx}>
+            <div class="exp-header">
+              <div class="exp-title-wrap">
+                <p class="exp-title">{exp.title}</p>
+                <p class="exp-skills">{exp.skills}</p>
+              </div>
+              <p class="exp-dates">{exp.from} – {exp.to}</p>
+            </div>
+            <div class="exp-panel" aria-hidden="true">
+              {exp.items.map((item) => (
+                <p class="exp-item-text">— {item}</p>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <h2 class="section-heading">Social</h2>
+      <ul class="social-list">
+        <li><a class="social-link" href="https://github.com/ikas" target="_blank" rel="noopener noreferrer">Github</a></li>
+        <li><a class="social-link" href="https://www.linkedin.com/in/henrique-pacheco/" target="_blank" rel="noopener noreferrer">Linkedin</a></li>
+        <li><a class="social-link" href="https://www.instagram.com/henriquejcpacheco" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+      </ul>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .about-page {
+    padding: var(--space-6) 0 var(--space-7);
+  }
+
+  .container {
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 0 var(--space-4);
+  }
+
+  .section-heading {
+    font-family: var(--font-body);
+    font-size: 3.052rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 0 var(--space-4);
+  }
+
+  .exp-heading {
+    margin-top: var(--space-6);
+  }
+
+  .bio {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: var(--color-primary);
+    margin: 0 0 var(--space-3);
+  }
+
+  .contact-link {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    text-decoration: none;
+    border-bottom: 3px solid var(--color-primary);
+    padding-bottom: 2px;
+    transition: opacity var(--transition);
+    margin-top: var(--space-2);
+  }
+
+  .contact-link:hover {
+    opacity: 0.6;
+  }
+
+  .experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    margin-bottom: var(--space-5);
+  }
+
+  .exp-item {
+    cursor: pointer;
+  }
+
+  .exp-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    user-select: none;
+  }
+
+  .exp-title-wrap {
+    flex: 1;
+  }
+
+  .exp-title {
+    font-family: var(--font-body);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin: 0 0 var(--space-1);
+    transition: opacity var(--transition);
+  }
+
+  .exp-item:hover .exp-title,
+  .exp-item.open .exp-title {
+    opacity: 0.7;
+  }
+
+  .exp-skills {
+    font-size: 0.9rem;
+    color: var(--color-secondary);
+    margin: 0;
+  }
+
+  .exp-dates {
+    font-size: 1rem;
+    color: var(--color-primary-70);
+    white-space: nowrap;
+    margin: 0;
+  }
+
+  .exp-panel {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  }
+
+  .exp-item.open .exp-panel {
+    max-height: 1000px;
+    opacity: 1;
+  }
+
+  .exp-item-text {
+    font-size: 1.1rem;
+    color: var(--color-primary);
+    margin: var(--space-3) 0 0;
+    line-height: 1.5;
+  }
+
+  .social-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--space-7);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .social-link {
+    font-family: var(--font-body);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: opacity var(--transition);
+  }
+
+  .social-link:hover {
+    opacity: 0.6;
+  }
+
+  @media (max-width: 544px) {
+    .exp-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.exp-item').forEach((item) => {
+    item.addEventListener('click', () => {
+      item.classList.toggle('open');
+    });
+  });
+</script>

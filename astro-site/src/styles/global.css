@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&family=Work+Sans:wght@300;400;600;700&display=swap');
+
+/* ── Design tokens ── */
+:root {
+  --color-primary:        #303D5D;
+  --color-primary-90:     rgba(48, 61, 93, 0.9);
+  --color-primary-70:     rgba(48, 61, 93, 0.7);
+  --color-primary-50:     rgba(48, 61, 93, 0.5);
+  --color-secondary:      #899CBC;
+  --color-tertiary:       #C2D987;
+  --color-white:          #FFFFFF;
+  --color-light-gray:     #EAEAEA;
+
+  --space-0: 0;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 64px;
+  --space-7: 128px;
+
+  --font-body: 'Work Sans', sans-serif;
+  --font-display: 'Mukta', sans-serif;
+
+  --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition: 0.3s var(--ease);
+}
+
+/* ── Reset / base ── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { height: 100%; }
+
+body {
+  margin: 0;
+  height: 100%;
+  background: #fff;
+  color: var(--color-primary);
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  line-height: 2.06rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  cursor: none !important;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: none;
+}
+
+#root, #app { height: 100%; }

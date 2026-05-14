@@ -2,11 +2,7 @@
   "version": 2,
   "name": "pacheco-blog",
   "alias": ["henriquepacheco.com"],
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@now/static-build",
-      "config": { "distDir": "public" }
-    }
-  ]
+  "installCommand": "echo skip",
+  "buildCommand": "cd astro-site && npm install && npm run build",
+  "outputDirectory": "astro-site/dist"
 }

@@ -1,0 +1,113 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+);
+---
+
+<Layout title="Blog — Henrique Pacheco" currentUrl="/blog">
+  <section class="blog-page">
+    <div class="container">
+      <h1 class="page-heading">Blog</h1>
+      <div class="posts-grid">
+        {posts.map((post) => (
+          <a href={`/blog/${post.id}`} class="post-card">
+            {post.data.image && (
+              <div class="post-card-image" style={`background-image: url(${post.data.image})`}></div>
+            )}
+            <div class="post-card-info">
+              <h2 class="post-card-title">{post.data.title}</h2>
+              <span class="post-category">{post.data.category}</span>
+              <p class="post-card-date">{new Date(post.data.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .blog-page {
+    padding: var(--space-6) 0 var(--space-7);
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 var(--space-4);
+  }
+
+  .page-heading {
+    font-family: var(--font-body);
+    font-size: 3.052rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: var(--space-5);
+  }
+
+  .posts-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .post-card {
+    flex-basis: 45%;
+    box-shadow: 0 0 10px 0 var(--color-primary-50);
+    border-radius: 5px;
+    margin: 0 12px 24px;
+    text-decoration: none;
+    color: inherit;
+    transition: all var(--transition);
+    display: block;
+  }
+
+  .post-card:hover {
+    transform: scale(1.02);
+    opacity: 0.8;
+  }
+
+  .post-card-image {
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px 5px 0 0;
+  }
+
+  .post-card-info {
+    padding: 16px;
+  }
+
+  .post-card-title {
+    font-family: var(--font-body);
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0 0 var(--space-2);
+  }
+
+  .post-category {
+    display: inline-flex;
+    background: var(--color-secondary);
+    color: var(--color-white);
+    padding: 4px 8px;
+    font-size: 14px;
+    line-height: 16px;
+    border-radius: 5px;
+    margin-top: var(--space-2);
+  }
+
+  .post-card-date {
+    font-size: 1rem;
+    color: var(--color-primary-70);
+    margin: var(--space-2) 0 0;
+  }
+
+  @media (max-width: 768px) {
+    .post-card { flex-basis: 100%; }
+  }
+</style>

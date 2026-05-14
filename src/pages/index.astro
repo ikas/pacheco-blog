@@ -8,6 +8,10 @@ import Layout from '../layouts/Layout.astro';
       <h1 class="hero-name">Henrique<br />Pacheco</h1>
       <p class="hero-sub">Software Engineer from Portugal</p>
     </section>
+
+    <a class="side-project" href="https://retrofoot.fun" target="_blank" rel="noopener noreferrer">
+      Check out my side project: <span class="side-project-name">retrofoot.fun</span> ↗
+    </a>
   </div>
 </Layout>
 
@@ -17,6 +21,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .home-wrapper {
+    position: relative;
     display: flex;
     flex-direction: column;
     height: calc(100vh - 80px);
@@ -52,17 +57,39 @@ import Layout from '../layouts/Layout.astro';
     font-size: 30px;
     line-height: 33px;
     color: var(--color-primary-90);
-    width: 50%;
+    white-space: nowrap;
     margin: var(--space-4) auto 0;
+  }
+
+  .side-project {
+    position: absolute;
+    bottom: var(--space-5);
+    right: var(--space-5);
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--color-primary-70);
+    text-decoration: none;
+    transition: opacity var(--transition);
+  }
+
+  .side-project:hover {
+    opacity: 0.6;
+  }
+
+  .side-project-name {
+    color: var(--color-primary);
   }
 
   @media (max-width: 768px) {
     .hero-name { font-size: 100px; line-height: 100px; -webkit-text-stroke: 4px transparent; }
-    .hero-sub { font-size: 26px; line-height: 29px; width: 80%; }
+    .hero-sub { font-size: 26px; line-height: 29px; }
+    .side-project { bottom: var(--space-4); right: var(--space-4); }
   }
 
   @media (max-width: 544px) {
     .hero-name { font-size: 56px; line-height: 56px; -webkit-text-stroke: 2px transparent; }
     .hero-sub { font-size: 20px; line-height: 22px; }
+    .side-project { bottom: var(--space-3); right: var(--space-3); }
   }
 </style>

@@ -16,7 +16,10 @@ Our main goal was to make a command line tool that was able to, first of all, **
 
 Skipping ahead the headaches of two rookies trying to create a functional Makefile and a properly-structured Perl module, the architecture of the system can be illustrated as follows:
 
-![Carson Bot architecture][img-carson-architecture]
+<picture>
+  <source media="(max-width: 544px)" srcset="/posts/bot_arch-stacked.svg">
+  <img src="/posts/bot_arch.png" alt="Carson Bot architecture">
+</picture>
 
 ### Parsing the script
 
@@ -71,5 +74,4 @@ I hope you have enjoyed this post! You can take a look at the source code of Mr.
 [downtown-link]: http://www.imdb.com/title/tt1606375/
 [mary-link]: http://marianacapelo.com
 
-[img-carson-architecture]: /posts/bot_arch.png
 [img-carson-working]: /posts/carson.gif

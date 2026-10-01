@@ -16,7 +16,10 @@ I'm a bit skeptical when it comes to revolutionary products or services - more o
 
 Blockchains are lists of **blocks**, where each block contains the information about a single transaction, the timestamp of when it occurred, and a link to the previous block. This assumes the existence of an original (aka *genesis*) block, which represents the first transaction of a blockchain system.
 
-![An example of a blockchain][img-blockchain-example]
+<picture>
+  <source media="(max-width: 544px)" srcset="/posts/blockchain-example-stacked.svg">
+  <img src="/posts/blockchain-example.png" alt="An example of a blockchain">
+</picture>
 
 ## Why you can't cheat a blockchain
 
@@ -58,5 +61,3 @@ I hope this post raised your interest on finding out more about blockchains. See
 [bitgive-link]: https://www.bitgivefoundation.org/
 [shai-rubin-link]: https://www.youtube.com/watch?v=93E_GzvpMA0
 [ethereum-app-link]: https://www.youtube.com/watch?v=T3X7hfltr8c
-
-[img-blockchain-example]: /posts/blockchain-example.png

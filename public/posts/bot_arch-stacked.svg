@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="342" height="620" viewBox="0 0 342 620" font-family="Helvetica, Arial, sans-serif" font-size="17" fill="none" stroke="#000" stroke-width="1.5">
+  <defs>
+    <marker id="ah" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#000" stroke="none"/>
+    </marker>
+  </defs>
+  <rect width="342" height="620" fill="#fff" stroke="none"/>
+  <circle cx="150" cy="40" r="26" fill="#fff"/>
+  <line x1="150" y1="66" x2="150" y2="104" marker-end="url(#ah)"/>
+  <rect x="40" y="106" width="220" height="74" rx="12" fill="#fff"/>
+  <text x="150" y="149" text-anchor="middle" fill="#000" stroke="none">Parse script data</text>
+  <line x1="150" y1="180" x2="150" y2="232" marker-end="url(#ah)"/>
+  <rect x="40" y="234" width="220" height="74" rx="12" fill="#fff"/>
+  <text x="150" y="277" text-anchor="middle" fill="#000" stroke="none">Decode user intent</text>
+  <line x1="150" y1="308" x2="150" y2="360" marker-end="url(#ah)"/>
+  <rect x="40" y="362" width="220" height="74" rx="12" fill="#fff"/>
+  <text x="150" y="405" text-anchor="middle" fill="#000" stroke="none">Handle user intent</text>
+  <line x1="150" y1="436" x2="150" y2="488" marker-end="url(#ah)"/>
+  <rect x="40" y="490" width="220" height="74" rx="12" fill="#fff"/>
+  <text x="150" y="533" text-anchor="middle" fill="#000" stroke="none">Send response to user</text>
+  <polyline points="260,527 310,527 310,271 262,271" marker-end="url(#ah)"/>
+</svg>

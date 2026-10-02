@@ -1,4 +1,5 @@
 ---
+import { Font } from 'astro:assets';
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -28,6 +29,8 @@ const {
     <meta name="keywords" content="software, engineer, braga, portugal, remote, frontend, ui, ux, programming, blog" />
     <meta name="google-site-verification" content="btqk2CUsVOmjOPgskaPb_R7MazjerdUKxqwaYNUTM0o" />
     <link rel="icon" type="image/png" href="/favicon.png" />
+    <Font cssVariable="--font-work-sans" preload={[{ weight: '400' }, { weight: '700' }]} />
+    <Font cssVariable="--font-mukta" preload={[{ weight: '700' }]} />
     <title>{title}</title>
   </head>
   <body>

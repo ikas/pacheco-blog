@@ -5,7 +5,7 @@ author:      "Henrique Pacheco"
 description: "A magnificent journey through the history of humankind."
 category:    "Books"
 featured:    true
-image:       "/posts/sapiens.jpg"
+image:       "../../assets/posts/sapiens.jpg"
 ---
 
 [Sapiens][sapiens-link] got me from the first page. Having been very well recommended by a friend, the bar was set high from the start, but it's easy to understand why. [Yuval Noah Harari][harari-link] describes the compelling, eloquent, sometimes **harsh** but always **fascinating** journey of the evolution of *Homo Sapiens* as a biological species - how it has spread, dominating virtually all the planet - ending today, where we stand.

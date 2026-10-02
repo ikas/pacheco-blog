@@ -5,7 +5,7 @@ author:      "Henrique Pacheco"
 description: "My first blog post, hope you enjoy!"
 category:    "Personal"
 featured:    false
-image:       "/posts/header.jpg"
+image:       "../../assets/posts/header.jpg"
 ---
 
 Hey :)

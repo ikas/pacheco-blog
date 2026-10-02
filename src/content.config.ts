@@ -3,14 +3,14 @@ import { glob } from 'astro/loaders';
 
 const blog = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/blog' }),
-  schema: z.object({
+  schema: ({ image }) => z.object({
     title: z.string(),
     date: z.string(),
     author: z.string(),
     description: z.string(),
     category: z.string(),
     featured: z.boolean().default(false),
-    image: z.string().optional(),
+    image: image().optional(),
   }),
 });
 

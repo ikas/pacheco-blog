@@ -5,7 +5,7 @@ author:      "Henrique Pacheco"
 description: "The power of a Unix terminal is still unreachable!"
 category:    "Tech"
 featured:    true
-image:       "/posts/devenv.jpg"
+image:       "../../assets/posts/devenv.jpg"
 ---
 
 Hey :)

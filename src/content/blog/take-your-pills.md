@@ -5,7 +5,7 @@ author:      "Henrique Pacheco"
 description: "A take on the growing dependency on cognitive enhancement meds."
 category:    "Documentaries"
 featured:    false
-image:       "/posts/take-your-pills.jpg"
+image:       "../../assets/posts/take-your-pills.jpg"
 ---
 
 [Take your pills][pills-link], released on March 16th 2018 on [Netflix][pills-netflix-link], is an entertaining take on the growing usage of prescription drugs such as [Adderall][adderall-link] or [Ritalin][ritalin-link] for performance improvements on the taker's daily lives. The documentary raises thought-provoking questions about the way we (as society) view our daily lives and the concept of success.

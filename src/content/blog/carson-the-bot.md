@@ -5,7 +5,7 @@ author:      "Henrique Pacheco"
 description: "How we implemented a chat bot to help us on our daily tasks."
 category:    "Tech"
 featured:    true
-image:       "/posts/carson.jpg"
+image:       "../../assets/posts/carson.jpg"
 ---
 
 Hey :) me and my girlfriend [Mariana Capelo][mary-link] have been attending Natural Language Processing classes at University of Minho, and as a practical project, we decided to implement a simple chat bot.

@@ -41,6 +41,17 @@ const {
     </main>
     <Footer />
     <Cursor />
+    <!-- Vercel's script no longer honours the va-disable localStorage key, so we check it
+         ourselves: set it in a browser (any value) to keep that browser out of the stats.
+         Inline so it runs before <Analytics /> reads window.webAnalyticsBeforeSend. -->
+    <script is:inline>
+      window.webAnalyticsBeforeSend = (event) => {
+        try {
+          if (localStorage.getItem('va-disable') !== null) return null;
+        } catch {}
+        return event;
+      };
+    </script>
     <Analytics />
     <SpeedInsights />
   </body>

@@ -91,18 +91,24 @@ const experiences = [
       <p class="bio">Today I'm a Senior Tech Lead at Deel, where I work with the teams that own Deel's payroll processing engine. On the side, I build my own products, Lume and Good Work.</p>
 
       <h2 class="section-heading build-heading">How I build</h2>
-      <p class="bio">I ship Mac, iPhone and web products on my own by directing AI coding agents through an agent orchestrator I built. For each change, the agents plan it, implement it, test it, check the result in a browser and review it. I decide what to build, design it, review the result and release it.</p>
-      <p class="bio">That's how I built Lume, which reached the Mac App Store in June 2026 and iPhone in September 2026, and Good Work, on the web.</p>
+      <p class="bio">I ship Mac, iPhone and web products in my spare time by directing AI coding agents through an agent orchestrator I built. For each change, the agents plan it, implement it, test it, check the result in a browser and review it. I decide what to build, design it, review the result and release it.</p>
+      <p class="bio">That's how I build my side projects.</p>
       <p class="bio">Want to know more?</p>
       <a class="contact-link" href="mailto:henriquejcpacheco@gmail.com">Get in touch</a>
 
       <h2 class="section-heading projects-heading">Side Projects</h2>
+      <p class="projects-intro">Two products I build in my spare time.</p>
       <div class="project-item">
-        <div class="project-header">
-          <p class="project-name">Lume</p>
-          <a class="project-link" href="https://lume-app.dev/" target="_blank" rel="noopener noreferrer">Visit ↗</a>
-        </div>
-        <p class="project-desc">I build Lume, a private net-worth and FIRE (Financial Independence, Retire Early) tracker for Mac and iPhone. It reads your own bank and broker statements on the device and works out your path to financial independence from them, so every figure shows the statement lines behind it. No bank login and no subscription; sync is optional and end-to-end encrypted.</p>
+        <h3 class="project-name"><a href="https://lume-app.dev/" target="_blank" rel="noopener noreferrer">Lume</a></h3>
+        <p class="project-platforms">Mac App Store, June 2026 · iPhone, September 2026</p>
+        <p class="project-desc">I build Lume, a private net-worth and FIRE (Financial Independence, Retire Early) tracker for anyone working towards financial independence. It reads your own bank and broker statements on the device, so every figure shows the statement lines behind it. No bank login and no subscription; sync is optional and end-to-end encrypted.</p>
+        <p class="project-desc">Under the hood, it's a React and TypeScript app in Tauri 2, with a thin Rust layer that talks to macOS and iOS. It imports PDF, CSV, Excel and OFX statements, and encrypts your data on the device (Argon2id and AES-GCM) before it syncs through Supabase, so the server only holds data it can't read.</p>
+      </div>
+      <div class="project-item">
+        <h3 class="project-name"><a href="https://good-work.app/" target="_blank" rel="noopener noreferrer">Good Work</a></h3>
+        <p class="project-platforms">Web, June 2025</p>
+        <p class="project-desc">I build Good Work, a dashboard for your whole life, not just your habits. You pick the few things you care about and log them in seconds. Every quarter, you see what's improving and what slipped, without a streak to break.</p>
+        <p class="project-desc">It's a Next.js and React app in TypeScript, with Postgres and sign-in on Supabase, Stripe for the Premium plan, and Withings for health data. The interface is built with shadcn/ui and Tailwind, and it runs on Vercel.</p>
       </div>
 
       <h2 class="section-heading exp-heading">Experience</h2>
@@ -169,11 +175,11 @@ const experiences = [
     margin-bottom: var(--space-5);
   }
 
-  .project-header {
-    display: flex;
-    align-items: baseline;
-    gap: var(--space-4);
-    margin-bottom: var(--space-2);
+  .projects-intro {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: var(--color-primary);
+    margin: 0 0 var(--space-4);
   }
 
   .project-name {
@@ -182,22 +188,24 @@ const experiences = [
     font-weight: 400;
     text-transform: uppercase;
     color: var(--color-primary);
-    margin: 0;
+    margin: 0 0 var(--space-1);
   }
 
-  .project-link {
-    font-family: var(--font-body);
-    font-size: 0.9rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: var(--color-tertiary);
+  .project-name a {
+    color: var(--color-primary);
     text-decoration: none;
-    letter-spacing: 0.05em;
     transition: opacity var(--transition);
   }
 
-  .project-link:hover {
-    opacity: 0.7;
+  .project-name a:hover {
+    opacity: 0.6;
+  }
+
+  .project-platforms {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--color-secondary);
+    margin: 0 0 var(--space-2);
   }
 
   .project-desc {
@@ -205,6 +213,10 @@ const experiences = [
     line-height: 1.6;
     color: var(--color-primary-70);
     margin: 0;
+  }
+
+  .project-desc + .project-desc {
+    margin-top: var(--space-2);
   }
 
   .bio {

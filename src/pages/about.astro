@@ -1,6 +1,24 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
+// JSON-LD for search engines. Lume and Good Work point their own Person blocks back at this @id.
+const person = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': 'https://henriquepacheco.com/about#henrique-pacheco',
+  name: 'Henrique Pacheco',
+  url: 'https://henriquepacheco.com',
+  jobTitle: 'Senior Tech Lead',
+  worksFor: { '@type': 'Organization', name: 'Deel' },
+  address: { '@type': 'PostalAddress', addressLocality: 'Braga', addressCountry: 'Portugal' },
+  sameAs: [
+    'https://github.com/ikas',
+    'https://www.linkedin.com/in/henrique-pacheco/',
+    'https://lume-app.dev/about/',
+    'https://good-work.app/about',
+  ],
+};
+
 const experiences = [
   {
     from: 'Oct 2025',
@@ -84,6 +102,7 @@ const experiences = [
 ---
 
 <Layout title="About — Henrique Pacheco" currentUrl="/about">
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(person)} />
   <section class="about-page">
     <div class="container">
       <h1 class="section-heading">Hello</h1>

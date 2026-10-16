@@ -86,3 +86,32 @@ const {
     });
   }
 </script>
+
+<script>
+  // Delegated on document so any link to Lume or Good Work counts, including ones in posts.
+  import { track } from '@vercel/analytics';
+
+  const PROJECT_HOSTS: Array<[string, string]> = [
+    ['lume-app.dev', 'lume'],
+    ['good-work.app', 'good-work'],
+  ];
+
+  function projectFor(hostname: string): string | undefined {
+    const match = PROJECT_HOSTS.find(([host]) => hostname === host || hostname.endsWith(`.${host}`));
+    return match?.[1];
+  }
+
+  function onProjectClick(event: MouseEvent) {
+    try {
+      if (event.type === 'auxclick' && event.button !== 1) return;
+      const link = (event.target as Element | null)?.closest?.('a[href]') as HTMLAnchorElement | null;
+      if (!link) return;
+      const project = projectFor(new URL(link.href).hostname);
+      if (!project) return;
+      track('project_click', { project, path: window.location.pathname });
+    } catch {}
+  }
+
+  document.addEventListener('click', onProjectClick);
+  document.addEventListener('auxclick', onProjectClick);
+</script>

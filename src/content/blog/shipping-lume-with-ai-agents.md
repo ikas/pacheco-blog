@@ -54,7 +54,7 @@ The biggest change in that run was 2.0. Up to then, Lume worked on balances you 
 
 This wasn't a fix for something that broke. It was a deliberate change of approach. Statements-first is a more powerful way to store the data: it keeps the source of every number and gives a lot more flexibility for what Lume can do later. Once I saw that, the question was only when to do it, and the answer was sooner rather than later. The app had just launched, and it would only get harder to change the foundation with every release built on top of the old one.
 
-It wasn't free. Sync had just shipped, and it had been built around balances. Moving to statements meant rethinking sync around statements too, which is a big part of why storage and sync v2 landed in 1.5.0, just before 2.0. Changing your storage model right after launch is not the textbook move, but I'm glad I did it while the app was still small.
+It wasn't free. Sync had just shipped, and moving to statements meant rethinking sync around statements too. Changing your storage model right after launch is not the textbook move, but I'm glad I did it while the app was still small.
 
 ## App Review said no
 

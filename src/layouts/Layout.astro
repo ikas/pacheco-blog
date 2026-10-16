@@ -11,13 +11,23 @@ interface Props {
   title?: string;
   description?: string;
   currentUrl?: string;
+  /** Share image for og:image and twitter:image: an absolute or root-relative URL. */
+  image?: string;
+  type?: 'website' | 'article';
 }
 
 const {
-  title = 'Henrique Pacheco: software engineer from Portugal',
-  description = "I'm Henrique, a Software Engineer from Braga, Portugal, working on full-stack development, from Node.js services to Client-Side Web applications. I'm into web technologies, clean and scalable solutions and remote working.",
+  title = 'Henrique Pacheco',
+  description = "I'm Henrique, a software engineer from Braga, Portugal. I've been building software since 2014 and working remotely since 2019.",
   currentUrl = '/',
+  image = '/og.png',
+  type = 'website',
 } = Astro.props;
+
+// Without the trailing slash the build adds, to match the site's own links and the RSS feed.
+const pageUrl = new URL(Astro.url.pathname.replace(/(.)\/$/, '$1'), Astro.site);
+const imageUrl = new URL(image, Astro.site);
+const isDefaultImage = image === '/og.png';
 ---
 
 <!doctype html>
@@ -26,12 +36,27 @@ const {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
-    <meta name="keywords" content="software, engineer, braga, portugal, remote, frontend, ui, ux, programming, blog" />
+    <link rel="canonical" href={pageUrl} />
+    <meta property="og:site_name" content="Henrique Pacheco" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={pageUrl} />
+    <meta property="og:type" content={type} />
+    <meta property="og:image" content={imageUrl} />
+    <meta property="og:image:alt" content="Henrique Pacheco" />
+    {isDefaultImage && <meta property="og:image:width" content="1200" />}
+    {isDefaultImage && <meta property="og:image:height" content="630" />}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageUrl} />
+    <link rel="alternate" type="application/rss+xml" title="Henrique Pacheco — Blog" href={new URL('/rss.xml', Astro.site)} />
     <meta name="google-site-verification" content="btqk2CUsVOmjOPgskaPb_R7MazjerdUKxqwaYNUTM0o" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <Font cssVariable="--font-work-sans" preload={[{ weight: '400' }, { weight: '700' }]} />
     <Font cssVariable="--font-mukta" preload={[{ weight: '700' }]} />
     <title>{title}</title>
+    <slot name="head" />
   </head>
   <body>
     <div id="screen-frame" data-home={currentUrl === '/' ? 'true' : 'false'} aria-hidden="true"></div>

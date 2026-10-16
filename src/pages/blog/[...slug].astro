@@ -1,7 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { getCollection, render } from 'astro:content';
-import { Image } from 'astro:assets';
+import { Image, getImage } from 'astro:assets';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -13,12 +13,16 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
+// Share image: the cover as a 1200-wide JPG (Astro keeps a narrower cover at its own width).
+const ogImage = post.data.image ? await getImage({ src: post.data.image, width: 1200, format: 'jpg' }) : undefined;
 ---
 
 <Layout
   title={`${post.data.title} — Henrique Pacheco`}
   description={post.data.description}
   currentUrl={`/blog/${post.id}`}
+  image={ogImage?.src}
+  type="article"
 >
   <article class="post-page">
     <div class="container">
